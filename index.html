@@ -853,6 +853,71 @@ var server = app.listen(3000, function () {
 
 
   
+    <article id="post-ques4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/22/ques4/">Object.prototype.toString.call()判断对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="判断数组还是对象"><a href="#判断数组还是对象" class="headerlink" title="判断数组还是对象"></a>判断数组还是对象</h4><pre><code>function isobjarr(value){
+    if(Object.prototype.toString.call(value)==&quot;[object Array]&quot;){
+        console.log(&quot;数组&quot;);
+    }else if(Object.prototype.toString.call(value)==&quot;[object Object]&quot;){
+        console.log(&quot;对象&quot;);
+    }else{
+        console.log(&quot;都不是&quot;);
+    }
+}
+</code></pre><p><strong>ps：千万不能使用typeof来判断对象和数组，因为这两种类型都会返回”object”。</strong></p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2018/03/22/ques4/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/03/22/ques4/" class="archive-article-date">
+  	<time datetime="2018-03-22T05:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-22</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作问题/">工作问题</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-ques3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -904,71 +969,6 @@ var server = app.listen(3000, function () {
 	<div class="article-category tagcloud">
 	<i class="icon-price-tags"></i>
 	<a class="article-category-link" href="/categories/query/">query</a>
-	</div>
-
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ques4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/22/ques4/">Object.prototype.toString.call()判断对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="判断数组还是对象"><a href="#判断数组还是对象" class="headerlink" title="判断数组还是对象"></a>判断数组还是对象</h4><pre><code>function isobjarr(value){
-    if(Object.prototype.toString.call(value)==&quot;[object Array]&quot;){
-        console.log(&quot;数组&quot;);
-    }else if(Object.prototype.toString.call(value)==&quot;[object Object]&quot;){
-        console.log(&quot;对象&quot;);
-    }else{
-        console.log(&quot;都不是&quot;);
-    }
-}
-</code></pre><p><strong>ps：千万不能使用typeof来判断对象和数组，因为这两种类型都会返回”object”。</strong></p>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/2018/03/22/ques4/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2018/03/22/ques4/" class="archive-article-date">
-  	<time datetime="2018-03-22T05:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-22</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作问题/">工作问题</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/programming/">programming</a>
 	</div>
 
 
