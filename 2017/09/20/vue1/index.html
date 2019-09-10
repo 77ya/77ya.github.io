@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>初识vue | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="vue data 的简单操作">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识vue">
+<meta property="og:url" content="http://yoursite.com/2017/09/20/vue1/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="vue data 的简单操作">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:56.007Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初识vue">
+<meta name="twitter:description" content="vue data 的简单操作">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-vue1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      初识vue
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>vue data 的简单操作</p>
+<a id="more"></a>
+<pre><code>  export default {
+  name: &apos;hello123&apos;,
+  data() {
+    return {
+      name: &apos;王小二&apos;,
+      age: 0,
+      sex: &apos;女&apos;,
+      status: true,
+      url: &apos;https://www.baidu.com/&apos;,
+      fn1: function() {
+       alert(假数据)
+      },
+      class1: true,
+      class2: false,
+      classobj: {
+        active: true,
+        &apos;tex2&apos;: true
+      },
+      lists: [
+        { color: &apos;yellow&apos; },
+        { color: &apos;blue&apos; },
+        { color: &apos;red&apos; }
+      ],
+      result:[&apos;王一&apos;,&apos;网二&apos;,&apos;网顺丰速递&apos;]
+    }
+  },
+  computed:{
+    myfn:function(){
+      return this.name + &quot;生命周期呀&quot;
+    }
+  }
+}
+</code></pre><blockquote>
+<p>模板基础语法</p>
+</blockquote>
+<h5 id="简单数据绑定"><a href="#简单数据绑定" class="headerlink" title="简单数据绑定"></a>简单数据绑定</h5><pre><code>&lt;p&gt;{{name}}&lt;/p&gt;
+</code></pre><h4 id="v-if-问题：age-5，输出10到20之间"><a href="#v-if-问题：age-5，输出10到20之间" class="headerlink" title="v-if  (问题：age=5，输出10到20之间)"></a>v-if  (问题：age=5，输出10到20之间)</h4><pre><code>&lt;p v-if=&quot;age&gt;20&quot;&gt;年级大于20——{{age}}&lt;/p&gt;
+&lt;p v-else-if =&quot;9&lt;age&lt;19&quot;&gt;10到20之间——{{age}}&lt;/p&gt;
+&lt;p v-else&gt;年龄小于10—— {{age}}&lt;/p&gt;
+</code></pre><h5 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h5><pre><code>&lt;p&gt;{{ status ? '显示' : '不显示' }}&lt;/p&gt;
+</code></pre><h5 id="v-bind-href-更新属性"><a href="#v-bind-href-更新属性" class="headerlink" title="v-bind:href 更新属性"></a>v-bind:href 更新属性</h5><pre><code>&lt;a v-bind:href=&apos;url&apos;&gt;点击这里调到百度去&lt;/a&gt;
+</code></pre><p>简写 ：href=’url’</p>
+<h5 id="v-on-click-监听dom"><a href="#v-on-click-监听dom" class="headerlink" title="v-on:click 监听dom"></a>v-on:click 监听dom</h5><pre><code>&lt;button v-on:click=&apos;fn1&apos;&gt;点击我&lt;/button&gt;
+</code></pre><p>简写 @click=’fn1’</p>
+<h5 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h5><pre><code>&lt;p v-for = &apos;(list,index) of lists&apos; v-bind:key=&apos;list.color&apos;&gt;
+  {{list.color}}_{{index}}
+&lt;/p&gt;
+</code></pre><p>for循环中使用key属性： 数据中有id绑定id，无直接绑定index</p>
+<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><pre><code>&lt;p&gt;{{myfn}}&lt;/p&gt;
+</code></pre><blockquote>
+<p>计算属性和观察者</p>
+</blockquote>
+<h4 id="计算属性（对data里的数据进行操作）"><a href="#计算属性（对data里的数据进行操作）" class="headerlink" title="计算属性（对data里的数据进行操作）"></a>计算属性（对data里的数据进行操作）</h4><pre><code>computed:{//这是计算属性（对data中的数据进行处理）
+   myfn:function(){
+     return this.name=&apos;计算属性操作name&apos;;
+   }
+ }
+</code></pre><h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><h4 id="问题：值绑定复选框逻辑值设置为字符串，失败，"><a href="#问题：值绑定复选框逻辑值设置为字符串，失败，" class="headerlink" title="问题：值绑定复选框逻辑值设置为字符串，失败，"></a>问题：值绑定复选框逻辑值设置为字符串，失败，</h4><p>解决方案：在data数据中传值，不可直接在html写字符串<br>  <input type="checkbox" v-model="checkbox1" v-bind:true-value="name" v-bind:false-value="sex"></p>
+<h4 id="es6中export的用法："><a href="#es6中export的用法：" class="headerlink" title="es6中export的用法："></a>es6中export的用法：</h4><p><a href="http://www.php.cn/js-tutorial-357671.html" target="_blank" rel="noopener">参考地址</a></p>
+<p>export用于对外输出本模块（一个文件可以理解成一个模块）变量的接口————对外输出（导出）</p>
+<p>import用于在一个模块中加载另一个含有export接口得模块————加载</p>
+<p>也就是说使用export命令定义了模块的对外接口以后，其他js文件可通过import命令加载这个模块</p>
+<p>如下：（a、b文件在同一目录下）</p>
+<p>a.js</p>
+<pre><code>var sex = &quot;boy&quot;;
+var echo = function(value){
+    console.log(value)
+}
+export {sex,echo}
+//通过向大括号中添加sex，echo变量并且export输出，就可以将对应变量值以sex、echo变量标识符形式暴露给其他文件而被读取到
+
+//不能写成export sex这样的方式，如果这样就相当于export &quot;boy&quot;,外部文件就获取不到该文件的内部变量sex的值，因为没有对外输出变量接口,只是输出的字符串。
+</code></pre><p>b.js</p>
+<pre><code>//通过import获取a.js文件的内部变量，{}括号内的变量来自于a.js文件export出的变量标识符
+
+import {sex,echo} from &quot;./a.js&quot;
+console.log(sex) // boy
+console.log(echo(sex)) // boy
+</code></pre><p>用export和import时，用户必须知道a.js所暴露的变量标识符（sex，echo），否则无法加载。</p>
+<p>而export default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名。</p>
+<p>a.js</p>
+<pre><code>var sex = &quot;boy&quot;;
+export default sex //sex不能加大括号
+//原本直接export sex外部是无法识别的，加上default就可以了.但是一个文件内最多只能有一个export default。
+
+//其实此处相当于为sex变量值&quot;boy&quot;起了一个系统默认的变量名default，自然default只能有一个值，所以一个文件内不能有多个export default。
+</code></pre><p>b.js</p>
+<pre><code>本质上，a.js文件的export default输出一个叫做default的变量，然后系统允许你为它取任意名字。所以可以为import的模块起任何变量名，且不需要用大括号包含
+import any from &quot;./a.js&quot;
+import any12 from &quot;./a.js&quot;
+console.log(any,any12) // boy,boy
+</code></pre><p>具体使用</p>
+<p>1、</p>
+<p>demo1.js</p>
+<pre><code>export const str = &quot;htllo world&quot;;
+export function f(a){
+    return a+1;
+}
+</code></pre><p>对应的导入方式：</p>
+<p>demo2.js</p>
+<pre><code>import {str,f} from &quot;./demo1.js&quot; //可以分开两次写，导入的时候带花括号
+</code></pre><p>2、</p>
+<p>demo1.js</p>
+<pre><code>export default const str = &quot;hello world&quot;
+</code></pre><p>demo2.js</p>
+<pre><code>import str from &quot;./demo1.js&quot; //导入时没有花括号
+</code></pre><h4 id="创建局部组件时，只在父组件中可用，父组件是什么？为生效"><a href="#创建局部组件时，只在父组件中可用，父组件是什么？为生效" class="headerlink" title="创建局部组件时，只在父组件中可用，父组件是什么？为生效"></a>创建局部组件时，只在父组件中可用，父组件是什么？为生效</h4><p>整个导出的对象是父组件<br>    export default {<br>        data:’’,<br>        component:{<br>            ‘test’:my-test //标签名+组件名  这个是子组件<br>        }<br>    }</p>
+<h4 id="prop怎么传数据"><a href="#prop怎么传数据" class="headerlink" title="prop怎么传数据"></a>prop怎么传数据</h4><p>已解决：父组件向子组件传数据，肯定是现在父组件中拿数据</p>
+<p>组件实例的作用域是孤立的——所以不能在子组件的模板内直接引用父组件。</p>
+<p>prop：父组件向子组件传数据，prop是支撑的意思，父亲是家里的支撑，所以数据写在<child message="这是父组件数据"></child></p>
+<p>注意：驼峰式命名的prop需要转换为短横线分隔式命名：myMessage转换为my-message</p>
+<h4 id="Prop-把一个对象的所有属性作为prop传递-子组件props里应该怎么写"><a href="#Prop-把一个对象的所有属性作为prop传递-子组件props里应该怎么写" class="headerlink" title="Prop 把一个对象的所有属性作为prop传递  子组件props里应该怎么写"></a>Prop 把一个对象的所有属性作为prop传递  子组件props里应该怎么写</h4><h4 id="单项数据刘-定义一个局部变量-如何执行"><a href="#单项数据刘-定义一个局部变量-如何执行" class="headerlink" title="单项数据刘 定义一个局部变量 如何执行"></a>单项数据刘 定义一个局部变量 如何执行</h4><p>已解决<br>     data:function(){<br>                return {<br>                    door:’数据测试’,<br>                    counter:1,<br>                    name:’小彭子’,<br>                    age:’18’<br>                    //newprop: this.myprop //将传过来的全局变量转为局部变量<br>                }<br>            },</p>
+<h4 id="prop从父组件传对象时失败"><a href="#prop从父组件传对象时失败" class="headerlink" title="prop从父组件传对象时失败"></a>prop从父组件传对象时失败</h4><h4 id="prop从父组件传递字符串弹出警告，但是成功了"><a href="#prop从父组件传递字符串弹出警告，但是成功了" class="headerlink" title="prop从父组件传递字符串弹出警告，但是成功了"></a>prop从父组件传递字符串弹出警告，但是成功了</h4><h4 id="非prop特性-哪里下载组件"><a href="#非prop特性-哪里下载组件" class="headerlink" title="非prop特性 哪里下载组件"></a>非prop特性 哪里下载组件</h4><h4 id="emit-自定义事件名-触发子组件的同时触发父组件绑定事件"><a href="#emit-自定义事件名-触发子组件的同时触发父组件绑定事件" class="headerlink" title="$emit(自定义事件名)触发子组件的同时触发父组件绑定事件"></a>$emit(自定义事件名)触发子组件的同时触发父组件绑定事件</h4><pre><code>var result = value.trim() //去除str前后空格
+.slice(0,value.indexOf(&quot;.&quot;) === -1
+       ? value.length
+       : value.indexOf(&quot;.&quot;)+3 //保留两位小数
+      )
+</code></pre><h4 id="视频笔记"><a href="#视频笔记" class="headerlink" title="视频笔记"></a>视频笔记</h4><ul>
+<li>“数据双向绑定”适用于表单元素 </li>
+<li>脚手架工具、webpack、组件化开发</li>
+</ul>
+<h4 id="scoped"><a href="#scoped" class="headerlink" title="scoped"></a>scoped</h4><p>于我们使用的scoped属性，它的存在可以让我们的组件的样式保持独立性，但同时使用scoped也存在一个问题，就是我们不应该在项目中定义重复的样式规则名称</p>
+<pre><code>&lt;style scoped&gt;&lt;/style&gt;
+</code></pre><h4 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h4><p>页面当中展示的数据需要尽快处理后展示</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/09/20/vue1/" class="archive-article-date">
+  	<time datetime="2017-09-20T15:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-09-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/10/18/json/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          json.parse()和json.stringify()
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/04/localStorage/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">localStorage和sessionStorage的用法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

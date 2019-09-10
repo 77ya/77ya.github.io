@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>深入理解JavaScript系列：函数（function） | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文链接：http://www.cnblogs.com/TomXu/archive/2012/01/30/2326372.html JavaScript中三种函数类型区别函数声明和表达式function foo(){} // 声明，因为它是程序的一部分   var bar = function foo(){}; // 表达式，因为它是赋值表达式的一部分    new function bar(){">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入理解JavaScript系列：函数（function）">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/function1/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="原文链接：http://www.cnblogs.com/TomXu/archive/2012/01/30/2326372.html JavaScript中三种函数类型区别函数声明和表达式function foo(){} // 声明，因为它是程序的一部分   var bar = function foo(){}; // 表达式，因为它是赋值表达式的一部分    new function bar(){">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.990Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="深入理解JavaScript系列：函数（function）">
+<meta name="twitter:description" content="原文链接：http://www.cnblogs.com/TomXu/archive/2012/01/30/2326372.html JavaScript中三种函数类型区别函数声明和表达式function foo(){} // 声明，因为它是程序的一部分   var bar = function foo(){}; // 表达式，因为它是赋值表达式的一部分    new function bar(){">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-function1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      深入理解JavaScript系列：函数（function）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原文链接：<a href="http://www.cnblogs.com/TomXu/archive/2012/01/30/2326372.html" target="_blank" rel="noopener">http://www.cnblogs.com/TomXu/archive/2012/01/30/2326372.html</a></p>
+<h4 id="JavaScript中三种函数类型"><a href="#JavaScript中三种函数类型" class="headerlink" title="JavaScript中三种函数类型"></a>JavaScript中三种函数类型</h4><h5 id="区别函数声明和表达式"><a href="#区别函数声明和表达式" class="headerlink" title="区别函数声明和表达式"></a>区别函数声明和表达式</h5><pre><code>function foo(){} // 声明，因为它是程序的一部分
+  var bar = function foo(){}; // 表达式，因为它是赋值表达式的一部分
+
+  new function bar(){}; // 表达式，因为它是new表达式
+
+  (function(){
+    function bar(){} // 声明，因为它是函数体的一部分
+  })();
+(function foo(){})  //表达式，他是表达式的原因是因为括号 ()是一个分组操作符，它的内部只能包含表达式
+</code></pre><a id="more"></a>
+<h3 id="函数声明（缩写为FD）"><a href="#函数声明（缩写为FD）" class="headerlink" title="函数声明（缩写为FD）"></a>函数声明（缩写为FD）</h3><ul>
+<li>有一个特定的名称</li>
+<li>在源码中的位置：要么处于程序级（Program level），要么处于其它函数的主体（FunctionBody）中</li>
+<li>在进入上下文阶段创建</li>
+<li>影响变量对象</li>
+<li>以下面的方式声明</li>
+</ul>
+<pre><code>//1）直接在全局上下文中申明
+exampleFunc();
+function exampleFunc(){
+    //2)或者在一个函数的函数体内
+    function innerFd(){};
+}
+</code></pre><h3 id="函数表达式-（缩写为FE）"><a href="#函数表达式-（缩写为FE）" class="headerlink" title="函数表达式 （缩写为FE）"></a>函数表达式 （缩写为FE）</h3><blockquote>
+<p>补充：表达式的定义：表达式 是一组可以计算出一个数值的有效的代码的集合。</p>
+</blockquote>
+<p>每一个合法的表达式都能计算成某个值，但从概念上讲，有两种类型的表达式：有副作用的（比如赋值）和单纯计算求值的。</p>
+<ul>
+<li>在源码中须出现在表达式的位置</li>
+<li>有可选的名称</li>
+<li>不会影响变量对象</li>
+<li>在代码执行阶段创建</li>
+</ul>
+<pre><code>//1)赋值申明
+var foo = function(){
+
+};
+foo();//执行此匿名函数
+
+//2)拥有可选名称
+var foo = function foos(){
+
+}
+//在外部：foo访问，函数内部（递归调用）：_foo;
+//FE总是处在表达式的位置
+// 圆括号（分组操作符）内只能是表达式
+(function foo() {});
+
+// 在数组初始化器内只能是表达式
+[function bar() {}];
+
+// 逗号也只能操作表达式
+1, function baz() {};
+</code></pre><blockquote>
+<p>逗号操作符的说明</p>
+</blockquote>
+<pre><code>// 注意是1,后面的声明
+1, function () {
+  alert(&apos;anonymous function is called&apos;);
+}();
+
+// 或者这个
+!function () {
+  alert(&apos;ECMAScript&apos;);
+}();
+</code></pre><blockquote>
+<p>我有疑问,为什么是匿名函数</p>
+</blockquote>
+<pre><code>function foo(callback) {
+  callback();
+}
+
+foo(function bar() {
+  alert(&apos;foo.bar&apos;);
+});
+
+foo(function baz() {
+  alert(&apos;foo.baz&apos;);
+});
+</code></pre><p>等同于<br>        var foo = function () {<br>          alert(‘foo’);<br>        };</p>
+<pre><code>foo();
+</code></pre><p>条件语句进行创建FE</p>
+<pre><code>var foo = 10;
+var bar = (foo % 2 == 0
+  ? function () { console.log(0); }
+  : function () { console.log(1); }
+);
+bar(); //0
+</code></pre><h3 id="函数构造器创建的函数"><a href="#函数构造器创建的函数" class="headerlink" title="函数构造器创建的函数"></a>函数构造器创建的函数</h3>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/26/function1/" class="archive-article-date">
+  	<time datetime="2017-06-26T08:56:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-26</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/27/closure/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          深入理解JavaScript系列：闭包（closures）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/25/Array1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深入理解JavaScript系列：数组（array）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>localStorage和sessionStorage的用法 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="localStorage:没有时间限制 sessionStorage：针对一个session的数据存储，关闭浏览器即被清除。  localStorage属性不涉及到登录业务时采用此存储方式，有存储定有值。 localStorage.setItem(&amp;apos;openid&amp;apos;,&amp;apos;aaa&amp;apos;); localStorage.getItem(&amp;apos;openid&amp;apos">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="localStorage和sessionStorage的用法">
+<meta property="og:url" content="http://yoursite.com/2017/09/04/localStorage/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="localStorage:没有时间限制 sessionStorage：针对一个session的数据存储，关闭浏览器即被清除。  localStorage属性不涉及到登录业务时采用此存储方式，有存储定有值。 localStorage.setItem(&amp;apos;openid&amp;apos;,&amp;apos;aaa&amp;apos;); localStorage.getItem(&amp;apos;openid&amp;apos">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="localStorage和sessionStorage的用法">
+<meta name="twitter:description" content="localStorage:没有时间限制 sessionStorage：针对一个session的数据存储，关闭浏览器即被清除。  localStorage属性不涉及到登录业务时采用此存储方式，有存储定有值。 localStorage.setItem(&amp;apos;openid&amp;apos;,&amp;apos;aaa&amp;apos;); localStorage.getItem(&amp;apos;openid&amp;apos">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-localStorage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      localStorage和sessionStorage的用法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>localStorage:没有时间限制</li>
+<li>sessionStorage：针对一个session的数据存储，关闭浏览器即被清除。</li>
+</ul>
+<h4 id="localStorage属性"><a href="#localStorage属性" class="headerlink" title="localStorage属性"></a>localStorage属性</h4><p>不涉及到登录业务时采用此存储方式，有存储定有值。</p>
+<pre><code>localStorage.setItem(&apos;openid&apos;,&apos;aaa&apos;);
+localStorage.getItem(&apos;openid&apos;);//aaa
+</code></pre><p>API</p>
+<pre><code>localStorage.getItem(‘key’,’val’) - 取得 
+localStorage.setItem(‘key’) - 设置 
+localStorage.removeItem(‘key’) - 移除 
+localStorage.key(0) - 取key值 
+localStorage.clear() - 清空
+</code></pre><h4 id="sessionStorage属性"><a href="#sessionStorage属性" class="headerlink" title="sessionStorage属性"></a>sessionStorage属性</h4><p>后台登录管理系统，必须从登录页面跳转实现，登录页面存储，后面页面取值。即实现登录功能。有存储重新打开无值。</p>
+<h5 id="单个储存"><a href="#单个储存" class="headerlink" title="单个储存"></a>单个储存</h5><pre><code>sessionStorage.setItem(&apos;openid&apos;,&apos;aaa&apos;);
+sessionStorage.getItem(&apos;openid&apos;);//aaa
+</code></pre><h5 id="多个变量对象储存"><a href="#多个变量对象储存" class="headerlink" title="多个变量对象储存"></a>多个变量对象储存</h5><p><a href="https://77ya.github.io/2017/10/18/json/" target="_blank" rel="noopener"><strong>ps：</strong> 对象储存需要用JSON.stringify()方法转为json字符串，取出的时候需要用JSON.parse()<br>转为json对象(sessionStorage,localStorage)</a></p>
+<pre><code> var data = {
+   &quot;url&quot;:&quot;1233&quot;,
+   &quot;age&quot;:2,
+   &quot;sex&quot;:&quot;女&quot;
+ }
+ sessionStorage.setItem(&quot;mydata&quot;,JSON.stringify(data)); //json对象转为字符串对象
+var mydata =  sessionStorage.getItem(&quot;mydata&quot;);
+ var result = JSON.parse(mydata)
+ console.log(result);
+</code></pre><h4 id="cookie和localstorage有什么区别"><a href="#cookie和localstorage有什么区别" class="headerlink" title="cookie和localstorage有什么区别"></a>cookie和localstorage有什么区别</h4><ul>
+<li>cookie数据大小不能超过4k</li>
+<li>cookie在服务端和客户端之间来回传递</li>
+<li>cookie可以设置很多属性，max-age，path，expires等</li>
+<li>localStorage存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
+<li>localStorage存储的数据容量更大</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/09/04/localStorage/" class="archive-article-date">
+  	<time datetime="2017-09-04T07:28:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-09-04</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/09/20/vue1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          初识vue
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/03/select/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">select下拉值的选取</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

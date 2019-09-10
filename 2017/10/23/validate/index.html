@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>jQuery validate学习笔记 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="目前手头上正在做的一个项目是关于微信服务号的，所以这个validate验证基于WEUI样式库的。">
+<meta name="keywords" content="jquery validate">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery validate学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/validate/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="目前手头上正在做的一个项目是关于微信服务号的，所以这个validate验证基于WEUI样式库的。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://oibijaovc.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171024172804.png">
+<meta property="og:updated_time" content="2019-03-13T02:46:56.006Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery validate学习笔记">
+<meta name="twitter:description" content="目前手头上正在做的一个项目是关于微信服务号的，所以这个validate验证基于WEUI样式库的。">
+<meta name="twitter:image" content="http://oibijaovc.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171024172804.png">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-validate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery validate学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目前手头上正在做的一个项目是关于微信服务号的，所以这个validate验证基于WEUI样式库的。</p>
+<a id="more"></a>
+<h4 id="导入js库"><a href="#导入js库" class="headerlink" title="导入js库"></a>导入js库</h4><p>使用bootstrap提供的cdn引入js库和css库；</p>
+<pre><code>&lt;link href=&quot;https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><p>方式一：将校验规则写在控件中</p>
+<pre><code>&lt;div class=&quot;weui-cell&quot;&gt;
+    &lt;div class=&quot;weui-cell__hd&quot;&gt;&lt;label for=&quot;firstname&quot; class=&quot;weui-label&quot;&gt;名字&lt;/label&gt;&lt;/div&gt;
+    &lt;div class=&quot;weui-cell__bd&quot;&gt;
+        &lt;input id=&quot;firstname&quot; name=&quot;firstname&quot; maxlength=&quot;10&quot; minlength=&quot;2&quot; class=&quot;weui-input&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>方式二：将校验方法写在js中</p>
+<pre><code>rules:{
+    firstname:&quot;required&quot;,
+    lastname:&quot;required&quot;,
+    username:{
+    required:true,
+    minlength:2,
+    maxlength:10
+    }
+}
+</code></pre><h4 id="具体使用介绍"><a href="#具体使用介绍" class="headerlink" title="具体使用介绍"></a>具体使用介绍</h4><p>html代码</p>
+<pre><code> &lt;form action=&quot;&quot; method=&quot;&quot; id=&quot;commentForm&quot;&gt;
+    &lt;div class=&quot;weui-cells weui-cells_form&quot;&gt;
+            &lt;div class=&quot;weui-cell&quot;&gt;
+                &lt;div class=&quot;weui-cell__hd&quot;&gt;&lt;label for=&quot;firstname&quot; class=&quot;weui-label&quot;&gt;名字&lt;/label&gt;&lt;/div&gt;
+                &lt;div class=&quot;weui-cell__bd&quot;&gt;
+                    &lt;input id=&quot;firstname&quot; name=&quot;firstname&quot; maxlength=&quot;10&quot; minlength=&quot;2&quot; class=&quot;weui-input&quot; type=&quot;text&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;weui-cell&quot;&gt;
+                &lt;div class=&quot;weui-cell__hd&quot;&gt;
+                    &lt;label for=&quot;lastname&quot; class=&quot;weui-label&quot;&gt;姓氏&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;weui-cell__bd&quot;&gt;
+                    &lt;input name=&quot;lastname&quot; id=&quot;lastname&quot; class=&quot;weui-input&quot;  type=&quot;text&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;weui-cell&quot;&gt;
+                    &lt;div class=&quot;weui-cell__hd&quot;&gt;
+                        &lt;label for=&quot;username&quot; class=&quot;weui-label&quot;&gt;用户名&lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;weui-cell__bd&quot;&gt;
+                        &lt;input name=&quot;username&quot; id=&quot;username&quot; class=&quot;weui-input&quot;  type=&quot;text&quot;&gt;
+                    &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;weui-cell&quot;&gt;
+                &lt;div class=&quot;weui-cell__hd&quot;&gt;
+                    &lt;label for=&quot;password&quot; class=&quot;weui-label&quot;&gt;密码&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;weui-cell__bd&quot;&gt;
+                    &lt;input name=&quot;password&quot; id=&quot;password&quot; class=&quot;weui-input&quot;  type=&quot;text&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;weui-cell&quot;&gt;
+                &lt;div class=&quot;weui-cell__hd&quot;&gt;
+                    &lt;label for=&quot;confirm_password&quot; class=&quot;weui-label&quot;&gt;验证密码&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;weui-cell__bd&quot;&gt;
+                    &lt;input name=&quot;confirm_password&quot; id=&quot;confirm_password&quot; class=&quot;weui-input&quot;  type=&quot;text&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;weui-cell&quot;&gt;
+                &lt;div class=&quot;weui-cell__hd&quot;&gt;
+                    &lt;label for=&quot;email&quot; class=&quot;weui-label&quot;&gt;Email&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;weui-cell__bd&quot;&gt;
+                    &lt;input name=&quot;email&quot; id=&quot;email&quot; class=&quot;weui-input&quot;  type=&quot;email&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;label for=&quot;agree&quot; class=&quot;weui-agree&quot;&gt;
+                    &lt;input name=&quot;agree&quot; id=&quot;agree&quot; type=&quot;checkbox&quot; class=&quot;weui-agree__checkbox&quot;&gt;
+                    &lt;span class=&quot;weui-agree__text&quot;&gt;
+                        阅读并同意&lt;a href=&quot;javascript:void(0);&quot;&gt;《相关条款》&lt;/a&gt;
+                    &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label for=&quot;newsletter&quot; class=&quot;weui-agree&quot;&gt;
+                    &lt;input name=&quot;newsletter&quot; id=&quot;newsletter&quot; type=&quot;checkbox&quot; class=&quot;weui-agree__checkbox&quot;&gt;
+                    &lt;span class=&quot;weui-agree__text&quot;&gt;随便你勾选不&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;h4&gt;至少选择两个&lt;/h4&gt;
+            &lt;div&gt;
+                &lt;label for=&quot;topic_marketflash&quot; class=&quot;weui-agree&quot;&gt;
+                        &lt;input name=&quot;topic[]&quot; id=&quot;topic_marketflash&quot; type=&quot;checkbox&quot; value=&quot;diyige&quot; class=&quot;weui-agree__checkbox&quot;&gt;
+                        &lt;span class=&quot;weui-agree__text&quot;&gt;苹果&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label for=&quot;topic_marketflash2&quot; class=&quot;weui-agree&quot;&gt;
+                        &lt;input name=&quot;topic[]&quot; id=&quot;topic_marketflash2&quot; type=&quot;checkbox&quot; value=&quot;1&quot; class=&quot;weui-agree__checkbox&quot;&gt;
+                        &lt;span class=&quot;weui-agree__text&quot;&gt;梨&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label for=&quot;topic_marketflash3&quot; class=&quot;weui-agree&quot;&gt;
+                        &lt;input name=&quot;topic[]&quot; id=&quot;topic_marketflash3&quot; type=&quot;checkbox&quot;  value=&quot;1&quot; class=&quot;weui-agree__checkbox&quot;&gt;
+                        &lt;span class=&quot;weui-agree__text&quot;&gt;香蕉&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label for=&quot;topic_marketflash4&quot; class=&quot;weui-agree&quot;&gt;
+                        &lt;input name=&quot;topic[]&quot; id=&quot;topic_marketflash4&quot; type=&quot;checkbox&quot;   value=&quot;1&quot; class=&quot;weui-agree__checkbox&quot;&gt;
+                        &lt;span class=&quot;weui-agree__text&quot;&gt;西瓜&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;submit提交&quot;&gt;
+        &lt;input type=&quot;button&quot; onclick=&quot;savedate()&quot; value=&quot;ajax提交&quot;&gt;
+        &lt;button id=&quot;test&quot;&gt;click me&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><p>style样式（报错提示）</p>
+<pre><code>  input.error { border: 1px solid red; }
+label.error {
+    background:url(&quot;../image/page/unchecked.gif&quot;) no-repeat 0px 0px;
+    padding-left: 16px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    color: #EA5200;
+}
+label.checked {
+background:url(&quot;../image/page/checked.gif&quot;) no-repeat 0px 0px;
+}
+</code></pre><p>js代码</p>
+<pre><code>$(&quot;#test&quot;).bind(&quot;click&quot;,test())
+  function test(){
+      var a = $(&quot;form&quot;).serializeArray();
+          var objparm = new Object();
+          for(var i =0;i&lt;a.length;i++){
+              objparm[a[i].name]=a[i].value;
+          }
+          console.log(objparm);
+  }
+  $.validator.setDefaults({
+      submitHandler:function(){
+          alert(&quot;submit提交事件成功&quot;) ;
+          //form.submit();//submit提交
+          //$(form).savedate();//ajax提交
+
+      }
+  });
+  $(function(){
+      $(&quot;#commentForm&quot;).validate({//校验规则写在js代码中
+          // 在键盘按下并释放及提交后验证提交表单
+         // ignore: &quot;.ignore&quot;,//忽略验证的的input，但未生效
+          errorPlacement:function(error,element){//更改错误信息显示的位置
+              $(element).closest(&quot;form&quot;).find(&quot;label[for=&apos;&quot;+element.attr(&quot;id&quot;)+&quot;&apos;]&quot;).append(error);
+          },
+          //debug:true,//只验证不提交表单(多用于调试的时候)
+         // errorElement:&quot;span&quot;, //提示的标签
+          rules:{
+              firstname:&quot;required&quot;,
+              lastname:&quot;required&quot;,
+              username:{
+                  required:true,
+                  minlength:2,
+                  maxlength:10
+              },
+              password:{
+                  required:true,
+                  minlength:5
+              },
+              confirm_password:{
+                  required:true,
+                  minlength:5,
+                  equalTo:&quot;#password&quot;
+              },
+              email:{
+                  required:true,
+                  email:true
+              },
+              &quot;topic[]&quot;:{
+                  required:&quot;#newsletter:checked&quot;,
+                  minlength:2
+              },
+              agree:{
+                  required:true
+              }
+          },
+          messages:{
+              firstname: &quot;请输入您的名字&quot;,
+              lastname: &quot;请输入您的姓氏&quot;,
+              username: {
+                required: &quot;请输入用户名&quot;,
+                minlength: &quot;用户名必需由两个字母组成&quot;
+              },
+              password: {
+                required: &quot;请输入密码&quot;,
+                minlength: &quot;密码长度不能小于 5 个字母&quot;
+              },
+              confirm_password: {
+                required: &quot;请输入密码&quot;,
+                minlength: &quot;密码长度不能小于 5 个字母&quot;,
+                equalTo: &quot;两次密码输入不一致&quot;
+              },
+              email: &quot;请输入一个正确的邮箱&quot;,
+              agree: &quot;请接受我们的声明&quot;,
+              topic: &quot;请选择两个主题&quot;
+            }
+      });
+  })
+  //ajax提交
+  //参数设置
+  function savedate(){
+      //获取data方法一：
+      var data = {};
+      var myname = $(&quot;#cname&quot;).val();
+      data[&quot;name&quot;] = myname;
+      //获取data方法二
+      //获取所有的参数数组
+      var paramArr = $(&quot;form&quot;).serializeArray();
+      //拼接参数对象
+      var paramObj =new Object();  
+      for(var i = 0 , len = paramArr.length ; i &lt; len ; i++){
+          paramObj[paramArr[i].name] = paramArr[i].value;
+      }
+      $.ajax({
+          url:&quot;../../update&quot;,
+          data: data,
+          dataType:&quot;json&quot;,
+          success:function(result){
+              if(result.status != 0){
+                  alert(result.msg);
+                  result;
+              }
+              alert(&quot;数据提交成功&quot;)
+          },
+          error:function(data,status,e){//服务器响应失败处理函数
+              alert(e);
+          }
+      })
+  }
+</code></pre><h4 id="点击submit提交后的页面效果"><a href="#点击submit提交后的页面效果" class="headerlink" title="点击submit提交后的页面效果"></a>点击submit提交后的页面效果</h4><p><img src="http://oibijaovc.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171024172804.png" alt></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/10/23/validate/" class="archive-article-date">
+  	<time datetime="2017-10-23T06:17:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-10-23</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery-validate/">jquery validate</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/12/11/ques1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          new Date 在ios上的兼容
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/23/closest/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模拟菜单选中效果</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

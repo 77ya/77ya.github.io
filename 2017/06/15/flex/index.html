@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>flex-弹性盒子模型 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="开始准备开始之前，头部需添加以下meta： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=0&amp;quot;&amp;gt; 注意，设为 Flex 布局以后，子元素的float、clear和vertical-ali">
+<meta name="keywords" content="css flex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flex-弹性盒子模型">
+<meta property="og:url" content="http://yoursite.com/2017/06/15/flex/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="开始准备开始之前，头部需添加以下meta： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=0&amp;quot;&amp;gt; 注意，设为 Flex 布局以后，子元素的float、clear和vertical-ali">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://oibijaovc.bkt.clouddn.com/flex.png">
+<meta property="og:image" content="http://oibijaovc.bkt.clouddn.com/float.png">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="flex-弹性盒子模型">
+<meta name="twitter:description" content="开始准备开始之前，头部需添加以下meta： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=0&amp;quot;&amp;gt; 注意，设为 Flex 布局以后，子元素的float、clear和vertical-ali">
+<meta name="twitter:image" content="http://oibijaovc.bkt.clouddn.com/flex.png">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-flex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      flex-弹性盒子模型
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="开始准备"><a href="#开始准备" class="headerlink" title="开始准备"></a>开始准备</h4><p>开始之前，头部需添加以下meta：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, 
+initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;
+</code></pre><p><strong><font color="#ff7f50">注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。</font></strong></p>
+<h4 id="flex属性介绍"><a href="#flex属性介绍" class="headerlink" title="flex属性介绍"></a>flex属性介绍</h4><blockquote>
+<p>定义在flex弹性容器内 </p>
+</blockquote>
+<pre><code>.box{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow:row-reverse wrap;
+    flex-direction:row-reverse;
+    flex-wrap:wrap;
+    align-content:center;
+    align-items:center;
+    justify-content:center;
+}
+</code></pre><ol>
+<li><p>flex-flow</p>
+<p> 复合属性，flex-direction、flex-wrap，子项元素的排列顺序、是否拆行或拆列</p>
+</li>
+<li><p>flex-direction</p>
+<p> 子项元素方向，默认值是row</p>
+<p> row：水平显示</p>
+<p> row-reverse：水平相反的顺序</p>
+<p> column：垂直显示</p>
+<p> column-reverse：垂直相反顺序显示</p>
+<p> initial：设置为默认值</p>
+<p> inherit：从父元素继承该属性</p>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li><p>flex-wrap</p>
+<p> 是否拆行或拆列，默认值是nowrap</p>
+<p> nowrap：默认值，不拆行或不拆列</p>
+<p> wrap：必要的时候拆行或拆列</p>
+<p> wrap-reverse：必要的时候拆行或拆列，但以相反的顺序</p>
+<p> initial：设置为默认值</p>
+<p> inherit：从父元素继承</p>
+</li>
+<li><p>align-content</p>
+<p> 所有可用空间对齐容器内的各项（垂直方向）,默认值：stretch</p>
+<p> stretch；默认值，项目被拉伸以适应容器</p>
+<p> center：位于容器的中心</p>
+<p> flex-start：开头</p>
+<p> flex-end:结尾</p>
+<p> space-between：各行之间有空白</p>
+<p> space-around：各行之前、之间、之后都留有空白</p>
+</li>
+<li><p>align-items</p>
+<p> 在纵轴上的对齐方式，（垂直方向）默认值：stretch;</p>
+<p> stretch:项目拉伸以适应容器，默认值</p>
+<p> center：容器中心</p>
+<p> flex-start：容器开头</p>
+<p> flex-end：容器结尾</p>
+<p> baseline：容器基线上</p>
+</li>
+</ol>
+<ol>
+<li><p>justify-content</p>
+<p> 在横轴上的对齐方式，（水平方向），默认值：stretch</p>
+<p> flex-start：容器开头，默认值</p>
+<p> flex-end：结尾</p>
+<p> center：中心</p>
+<p> space-between：各行之间留有空白</p>
+<p> space-around：各行之前、之间、之后有空白</p>
+</li>
+</ol>
+<blockquote>
+<p>定义在flex子项 </p>
+</blockquote>
+<pre><code>.items{ 
+    flex:1;
+    flex-grow:1;
+    flex-shrink:1;
+    flex-basis:20px;
+    align-self:center;
+}
+</code></pre><ol>
+<li><p>flex </p>
+<p>  复合属性。设置模型对象的资源的子元素如何分配空间flex-grow、flex-shrink、flex-basis</p>
+</li>
+<li><p>flex-grow</p>
+<p> 数字，扩展的量</p>
+</li>
+<li><p>flex-shrink</p>
+<p> 数字，收缩的量</p>
+</li>
+<li><p>flex-basis</p>
+<p> 长度单位或者百分比，规定初始长度</p>
+</li>
+<li><p>align-self</p>
+<p> 子项单独在侧轴（垂直方向）的对齐方式。默认值，继承父容器：align-items属性的值，如果没有父容器则为stretch</p>
+<p> stretch：元素拉伸以适应容器</p>
+<p> center：中心</p>
+<p> flex-start：开头</p>
+<p> flex-end：结尾</p>
+<p> baseline：基线上</p>
+</li>
+</ol>
+<ol>
+<li><p>order</p>
+<p> 盒模型对象的子元素出现顺序，默认值：0</p>
+<p> number：默认值为0，规定灵活项目的顺序</p>
+</li>
+</ol>
+<h4 id="flex示例一"><a href="#flex示例一" class="headerlink" title="flex示例一"></a>flex示例一</h4><pre><code>&lt;style&gt;
+    .box{display:-webkit-flex;display:flex;justify-content:space-between;/* display: inline-flex;行内元素 */align-items:baseline;height: 300px;border:1px solid red;}
+    .item{background-color:pink;width:100px;}
+&lt;/style&gt;
+&lt;div class=&quot;box&quot;&gt;
+    &lt;span class=&quot;item&quot; style=&quot;background-color: pink;width: 50px;&quot;&gt;注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。&lt;/span&gt;
+    &lt;span class=&quot;item&quot; style=&quot;background-color: #008cee;height: 50px;line-height: 50px;&quot;&gt;我是的发的发的发&lt;/span&gt;
+    &lt;span class=&quot;item&quot; style=&quot;background-color: #ffa000;height: 80px;&quot;&gt;我是的发的&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><p><img src="http://oibijaovc.bkt.clouddn.com/flex.png" alt></p>
+<h4 id="百分比示例一"><a href="#百分比示例一" class="headerlink" title="百分比示例一"></a>百分比示例一</h4><p>将外层元素按照百分比铺满的方式，里面的子元素固定或者左右浮动。<br><img src="http://oibijaovc.bkt.clouddn.com/float.png" alt></p>
+<pre><code>&lt;body&gt;
+&lt;style&gt;
+    .div{width: 100%;height: 100px;border:1px solid;}
+    .child1{float:left;background-color: pink;width: 50%;}
+    .child2{float:right;background-color: #008cee;width: 50%;}
+&lt;/style&gt;
+    &lt;div class=&quot;div&quot;&gt;
+        &lt;p class=&quot;child1&quot;&gt;这是左边的&lt;/p&gt;
+        &lt;p class=&quot;child2&quot;&gt;这是右边的&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre><h4 id="flex示例"><a href="#flex示例" class="headerlink" title="flex示例"></a>flex示例</h4><p>一个页面上两个div左右铺满整个浏览器，要保证左边的div一直为100px，右边的div跟随浏览器大小变化（比如浏览器为500，右边div为400，浏览器为900，右边div为800），请写出大概的css代码。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/15/flex/" class="archive-article-date">
+  	<time datetime="2017-06-15T03:41:45.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-15</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-flex/">css flex</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/15/ajaxBasis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ajax增删改查
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/15/hexo1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo常用命令</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

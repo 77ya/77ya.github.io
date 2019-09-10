@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+<meta name="keywords" content="小彭子的博客,前端学习">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小彭子的博客">
+<meta property="og:url" content="http://yoursite.com/page/5/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小彭子的博客">
+<meta name="twitter:description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+  
+    <article id="post-flex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/15/flex/">flex-弹性盒子模型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="开始准备"><a href="#开始准备" class="headerlink" title="开始准备"></a>开始准备</h4><p>开始之前，头部需添加以下meta：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, 
+initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;
+</code></pre><p><strong><font color="#ff7f50">注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。</font></strong></p>
+<h4 id="flex属性介绍"><a href="#flex属性介绍" class="headerlink" title="flex属性介绍"></a>flex属性介绍</h4><blockquote>
+<p>定义在flex弹性容器内 </p>
+</blockquote>
+<pre><code>.box{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow:row-reverse wrap;
+    flex-direction:row-reverse;
+    flex-wrap:wrap;
+    align-content:center;
+    align-items:center;
+    justify-content:center;
+}
+</code></pre><ol>
+<li><p>flex-flow</p>
+<p> 复合属性，flex-direction、flex-wrap，子项元素的排列顺序、是否拆行或拆列</p>
+</li>
+<li><p>flex-direction</p>
+<p> 子项元素方向，默认值是row</p>
+<p> row：水平显示</p>
+<p> row-reverse：水平相反的顺序</p>
+<p> column：垂直显示</p>
+<p> column-reverse：垂直相反顺序显示</p>
+<p> initial：设置为默认值</p>
+<p> inherit：从父元素继承该属性</p>
+</li>
+</ol>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/06/15/flex/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/15/flex/" class="archive-article-date">
+  	<time datetime="2017-06-15T03:41:45.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-15</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-flex/">css flex</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexo1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/15/hexo1/">hexo常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>参考来源：<a href="https://segmentfault.com/a/1190000002632530" title="笔记参考" target="_blank" rel="noopener">https://segmentfault.com/a/1190000002632530</a></p>
+<h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><pre><code>npm install hexo -g  安装
+npm update hexo -g 升级
+hexo init  初始化
+</code></pre>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/06/15/hexo1/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/15/hexo1/" class="archive-article-date">
+  	<time datetime="2017-06-15T03:35:54.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-15</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-baidumap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/10/baidumap/">百度地图练习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="百度地图的引入"><a href="#百度地图的引入" class="headerlink" title="百度地图的引入"></a>百度地图的引入</h3><pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=ir7jFwBM0tPkLebXl3ScT9cB&quot;&gt;
+  &lt;/script&gt;
+
+  &lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js&quot;&gt;&lt;/script&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css&quot; /&gt;
+</code></pre><ol>
+<li>创建地图实例：BMap.Map(“container”)</li>
+</ol>
+<p>创建一个地图实例，container指容器id，之后调用Map.centerAndZoom()方法对地图进行初始化。未进行初始化的地图将不能进行任何操作。</p>
+<ol>
+<li><p>地图经纬度：BMap.Point</p>
+</li>
+<li><p>以指定的经度和纬度创建一个地理点坐标。</p>
+</li>
+<li><p>初始化地图：map.centerAndZoom(center:Point,Zoom:Number)</p>
+</li>
+</ol>
+<p>初始化地图，他有种设置参数方式，一是center类型为Point时，zoom必须赋值，范围3-19级，还有就是如果center类型为字符串时，比如“北京”，zoom可以忽略，地图将自动根据center适配最佳zoom级别。</p>
+<pre><code>window.onload = function(){
+    var map = new BMap.Map(&quot;container&quot;);
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 15); //map.centerAndZoom(&quot;北京&quot;);
+}
+</code></pre><h3 id="为地图批量添加标注-baidumap-html"><a href="#为地图批量添加标注-baidumap-html" class="headerlink" title="为地图批量添加标注(baidumap.html)"></a>为地图批量添加标注(baidumap.html)</h3><ul>
+<li>原理：通过for循环的方式为地图批量添加标注</li>
+<li>设置点的新图标：<ul>
+<li>构造出Icon对象：Icon（url:String,size:Size[,opts:IconOptions]）</li>
+<li>改变图标大小：setImageSize（offset：Size）；</li>
+<li>加载图标到地图上：setIcon（icon：Icon）
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/06/10/baidumap/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/10/baidumap/" class="archive-article-date">
+  	<time datetime="2017-06-10T12:54:29.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-10</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-css2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/css2/">默认样式总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>移动ios端有很多默认样式，可在全局样式中添加如下样式：</p>
+<h3 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h3><p>ios手机号识别样式覆盖</p>
+<pre><code>通过添加Safari私有属性解决
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;
+</code></pre><p>ios按钮默认为灰色</p>
+<pre><code>-webkit-appearance: none;
+</code></pre>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/12/28/css2/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/28/css2/" class="archive-article-date">
+  	<time datetime="2016-12-28T07:57:31.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-meta" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/meta/">移动端常用meta标签总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ios手机号码识别样式覆盖</p>
+<pre><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;
+</code></pre><p>) <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"><br> //强制让文档的宽度与设备的宽度保持1:1，<br> //文档初始化缩放比例是1:1，<br> //不允许用户点击屏幕放大浏览，<br>//允许用户缩放到的最大比例，<br> //尤其要注意的是content里多个属性的设置一定要用逗号+空格来隔开，如果不规范将不会起作用。其他属性有：width;height; initial-scale; minimum-scale; maximum-scale; user-scalable;<br>2) <meta name="apple-mobile-web-app-capable" content="yes"><br> //iPhone私有标签，它表示：允许全屏模式浏览<br>3) <meta name="apple-mobile-web-app-status-bar-style" content="black"><br>//iPhone私有标签，它指定的iPhone中safari顶端的状态条的样式<br>4) <meta name="format-detection" content="telephone=no; email=no">    //不识别邮件和不把数字识别为电话号码</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/28/meta/" class="archive-article-date">
+  	<time datetime="2016-12-28T06:41:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-css1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/21/css1/">input type=&quot;radio&quot;自定义样式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>input[type=&quot;radio&quot;] {
+  display: inline-block;
+  background: url(../input.png) no-repeat left -115px;
+  width: 20px;
+  height: 21px;
+  background-size: 20px auto;
+  -webkit-appearance: none;
+  outline:none;
+  border:none;
+}
+input[type=&quot;radio&quot;]:checked {
+  background: url(../input.png) no-repeat left -168px;
+  background-size: 20px auto;
+  outline:none;
+  border:none;
+}
+</code></pre><p>图片素材链接：<a href="http://oibijaovc.bkt.clouddn.com/input.png" target="_blank" rel="noopener">http://oibijaovc.bkt.clouddn.com/input.png</a></p>
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p><img src="http://oibijaovc.bkt.clouddn.com/input1.gif" alt="Aaron Swartz"></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/21/css1/" class="archive-article-date">
+  	<time datetime="2016-12-21T03:08:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-21</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-compatible" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/20/compatible/">媒体查询器做屏幕适配</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="页面中比较常用的尺寸"><a href="#页面中比较常用的尺寸" class="headerlink" title="页面中比较常用的尺寸"></a>页面中比较常用的尺寸</h3><h1 id="iphone4-5"><a href="#iphone4-5" class="headerlink" title="iphone4,5"></a>iphone4,5</h1><h3 id="页面中比较常用的尺寸-1"><a href="#页面中比较常用的尺寸-1" class="headerlink" title="页面中比较常用的尺寸"></a>页面中比较常用的尺寸</h3><h5 id="iphone4-5-w-320px"><a href="#iphone4-5-w-320px" class="headerlink" title="iphone4,5(w:320px)"></a>iphone4,5(w:320px)</h5><pre><code>@media all and (min-width:320px) and(max-width: 360px){
+    body {  font-size: 12px;  }
+}
+</code></pre><h5 id="iphone6-w-375px"><a href="#iphone6-w-375px" class="headerlink" title="iphone6(w:375px)"></a>iphone6(w:375px)</h5><pre><code>@media all and (min-width:360px) and(max-width: 400px){
+    body {  font-size: 13px;  }
+}
+</code></pre><h5 id="iphon6plus-w-414px"><a href="#iphon6plus-w-414px" class="headerlink" title="iphon6plus(w:414px)"></a>iphon6plus(w:414px)</h5><pre><code>@media all and (min-width:400px) and(max-width: 560px){
+    body {  font-size: 14px;  }
+}
+</code></pre><h5 id="ipad-w-768px"><a href="#ipad-w-768px" class="headerlink" title="ipad(w:768px)"></a>ipad(w:768px)</h5><pre><code>@media all and (min-width:560px) and(max-width: 640px){
+    body {  font-size: 15px;  }
+}
+
+@media all and (min-width:640px) and(max-width: 750px) {
+    body {  font-size: 16px;  }
+}
+@media all and (min-width:750px) {
+    body {  font-size: 17px;  }
+}
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/20/compatible/" class="archive-article-date">
+  	<time datetime="2016-12-20T06:10:26.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-js-click" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/20/js-click/">移动端实现类似hover事件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="移动端在点击按钮瞬间"><a href="#移动端在点击按钮瞬间" class="headerlink" title="移动端在点击按钮瞬间"></a>移动端在点击按钮瞬间</h3><pre><code>document.body.addEventListener(&apos;touchstart&apos;, function(){ 
+document.getElementsByClassName(&apos;searBtn&apos;)[0].style.background=&apos;#fff&apos;;
+});
+</code></pre><h3 id="移开按钮的瞬间"><a href="#移开按钮的瞬间" class="headerlink" title="移开按钮的瞬间"></a>移开按钮的瞬间</h3><pre><code>document.body.addEventListener(&apos;touchend&apos;, function(){ 
+document.getElementsByClassName(&apos;searBtn&apos;)[0].style.background=&apos;#0089de&apos;;
+});
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/20/js-click/" class="archive-article-date">
+  	<time datetime="2016-12-20T03:27:21.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/17/javascript2/">初识对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简单认识对象"><a href="#简单认识对象" class="headerlink" title="简单认识对象"></a>简单认识对象</h2><h5 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h5><p>使用new构造函数</p>
+<pre><code>var obj = new Object(); 
+obj.name = &quot;MangGuo&quot;; 
+obj.age = 25;
+</code></pre><p>使用对象字面量表示法</p>
+<pre><code>var obj = {
+    name : &quot;MangGuo&quot;, //name是属性名，&quot;MangGuo&quot;是值
+    age : 25
+}
+</code></pre>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/12/17/javascript2/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/17/javascript2/" class="archive-article-date">
+  	<time datetime="2016-12-17T07:20:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/javascript1/">认识javascript</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="弹出框介绍"><a href="#弹出框介绍" class="headerlink" title="弹出框介绍"></a>弹出框介绍</h2><h5 id="警告框（alert）"><a href="#警告框（alert）" class="headerlink" title="警告框（alert）"></a>警告框（alert）</h5><pre><code>alert(&quot;hello&quot;)
+</code></pre><p>警告窗口有一个确定按钮，点击确定会继续执行后面的代码。    </p>
+<h5 id="确认选择（confirm）"><a href="#确认选择（confirm）" class="headerlink" title="确认选择（confirm）"></a>确认选择（confirm）</h5><pre><code>if(confirm(&quot;请选择？&quot;)==true){
+    document.write(&quot;您选了确定&quot;);
+}else{
+    document.write(&quot;您选了取消&quot;);
+}
+</code></pre>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/12/13/javascript1/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/13/javascript1/" class="archive-article-date">
+  	<time datetime="2016-12-13T12:51:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-13</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+    </nav>
+  
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

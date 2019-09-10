@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>ajax增删改查 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="$.get()方法$.get()方法通过http get请求从服务器上请求数据。 语法：$.get(url,[,data][,success][,dataType]);除url之外，所有属性可选。  网址：string; 请求的url地址  数据：PlainObject或String；发送到请求的服务器的普通对象或字符串  成功：function；回调函数；如果提供了dataType则必需，但可以">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax增删改查">
+<meta property="og:url" content="http://yoursite.com/2017/06/15/ajaxBasis/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="$.get()方法$.get()方法通过http get请求从服务器上请求数据。 语法：$.get(url,[,data][,success][,dataType]);除url之外，所有属性可选。  网址：string; 请求的url地址  数据：PlainObject或String；发送到请求的服务器的普通对象或字符串  成功：function；回调函数；如果提供了dataType则必需，但可以">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.979Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ajax增删改查">
+<meta name="twitter:description" content="$.get()方法$.get()方法通过http get请求从服务器上请求数据。 语法：$.get(url,[,data][,success][,dataType]);除url之外，所有属性可选。  网址：string; 请求的url地址  数据：PlainObject或String；发送到请求的服务器的普通对象或字符串  成功：function；回调函数；如果提供了dataType则必需，但可以">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-ajaxBasis" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ajax增删改查
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="get-方法"><a href="#get-方法" class="headerlink" title="$.get()方法"></a>$.get()方法</h5><p>$.get()方法通过http get请求从服务器上请求数据。</p>
+<p>语法：$.get(url,[,data][,success][,dataType]);除url之外，所有属性可选。</p>
+<ul>
+<li><p>网址：string; 请求的url地址</p>
+</li>
+<li><p>数据：PlainObject或String；发送到请求的服务器的普通对象或字符串</p>
+</li>
+<li><p>成功：function；回调函数；如果提供了dataType则必需，但可以使用null或jquery.noop作为占位符</p>
+</li>
+<li><p>数据类型：string；从服务器语气的数据类型。默认值：智能识别（xml，json，script，text，html）</p>
+</li>
+</ul>
+<a id="more"></a>
+<pre><code>$.get({
+    url:url，
+    data:{usernumber:1}，
+    success:function(data){
+        console.log(data)
+    }，
+    dataType:json
+})
+</code></pre><p>等价于</p>
+<pre><code>$.ajax({
+    type：&apos;get&apos;,
+    url:url，
+    data:{usernumber:1}，
+    success:function(data){
+        console.log(data)
+    }，
+    dataType:json
+})
+</code></pre><h5 id="post-方法"><a href="#post-方法" class="headerlink" title="$.post()方法"></a>$.post()方法</h5><p>$.post()方法通过 HTTP POST 请求从服务器上请求数据。</p>
+<p>语法：$.post(url[,data][,success][,dataType]);</p>
+<ul>
+<li><p>网址：string; 请求的url地址</p>
+</li>
+<li><p>数据：PlainObject或String；发送到请求的服务器的普通对象或字符串</p>
+</li>
+<li><p>成功：function；回调函数；如果提供了dataType则必需，但可以使用null或jquery.noop作为占位符</p>
+</li>
+<li><p>数据类型：string；从服务器语气的数据类型。默认值：智能识别（xml，json，script，text，html</p>
+<pre><code>$.post({
+    url:url,
+    data:{usernumber:1}
+    success:function(data){
+        console.log(data)
+    },
+    dataType:json
+})
+</code></pre></li>
+</ul>
+<p>等价于</p>
+<pre><code>$.ajax({
+    type:&apos;post&apos;,
+    url:url,
+    data:{usernumber:1}
+    success:function(data){
+        console.log(data)
+    },
+    dataType:json
+})
+</code></pre><h5 id="formdata提交表单（文件以流的形式提交）"><a href="#formdata提交表单（文件以流的形式提交）" class="headerlink" title="formdata提交表单（文件以流的形式提交）"></a>formdata提交表单（文件以流的形式提交）</h5><pre><code>var formdata = new FormData();
+formdata.append(&quot;showImg&quot;,$(&quot;#showImg&quot;)[0].files[0]);
+
+$.ajax({
+        url : &quot;../../clientadvertise/create&quot;,
+        type : &quot;post&quot;,
+        data : data,
+        dataType : &quot;json&quot;,
+        processData : false, // 告诉jQuery不要去处理发送的数据
+        contentType : false, // 告诉jQuery不要去设置Content-Type请求头
+        timeout : dsltyyz.timeout,
+        async : dsltyyz.async,
+        success : function(result) {
+            console.log()
+        }
+    })
+</code></pre><h5 id="JSONP解决get方式跨域"><a href="#JSONP解决get方式跨域" class="headerlink" title="JSONP解决get方式跨域"></a>JSONP解决get方式跨域</h5><pre><code>$.ajax({  
+        type : &quot;get&quot;,  
+        url: &quot;此处放跨域url&quot;,  
+        dataType : &quot;jsonp&quot;,//数据类型为jsonp    
+        jsonpCallback: &quot;mytest&quot;,//服务端用于接收callback调用的function名的参数   
+        success : function(data){  
+            //回调函数  
+        },  
+        error:function(){  
+        }  
+    });   
+</code></pre><p> 等价于</p>
+<pre><code>$.getJSON(&quot;此处放跨域url&quot;,   
+    function(data){  
+    //回调函数  
+});      
+</code></pre><h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h4><p>Ajax技术核心就是XMLHttpRequest对象。</p>
+<p>Ajax技术的工作原理：可以分成3步</p>
+<p>1.创建Ajax对象：var xhr = new XMLHttpRequest();</p>
+<p>2.xhr 发送请求：xhr.open(‘get’,’test.html’,’true’);</p>
+<pre><code>xhr.send();
+</code></pre><p>3.xhr获取响应：</p>
+<pre><code>xhr.onreadystatechange = function(){
+    if(xhr.readystate == 4){//请求的状态码
+                           /*
+                           0:请求还没有建立（open执行前）
+                           1：请求建立了还没发送（执行了open）
+                           2：请求正式发送（执行了send）
+                           3：请求已受理，有部分数据可以用，但还没有处理完成
+                           4：请求完全处理完成
+                              alert(xhr.responseText);//返回的数据
+                           }
+                         }
+</code></pre><p>Promise界面还允许jQuery的Ajax方法，包括$.get()在一个请求上链接多个.done() .fail()和.always()回调，甚至在请求之后分配这些回调已经完成 如果请求已经完成，则回调将立即触发。</p>
+<pre><code>var jqxhr = $.get( &quot;example.php&quot; , function () {
+     alert( &quot;success&quot; );
+})
+ .done( function () {
+     alert( &quot;second success&quot; );
+ })
+
+ .fail( function () {
+     alert( &quot;error&quot; );
+ })
+
+ .always( function () {
+     alert( &quot;finished&quot; );
+ });
+
+jqxhr.always( function () {
+     alert( &quot;second finished&quot; );
+});
+//示例
+$.get(&apos;data.json&apos;).done(function (data) {});
+</code></pre><h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/15/ajaxBasis/" class="archive-article-date">
+  	<time datetime="2017-06-15T03:45:07.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-15</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/15/git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          git命令行
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/15/flex/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">flex-弹性盒子模型</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

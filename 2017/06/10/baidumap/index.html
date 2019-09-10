@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>百度地图练习 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="百度地图的引入&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://api.map.baidu.com/api?v=2.0&amp;amp;ak=ir7jFwBM0tPkLebXl3ScT9cB&amp;quot;&amp;gt;   &amp;lt;/script&amp;gt;    &amp;lt;script type=&amp;quot;text/javascript&amp;quo">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="百度地图练习">
+<meta property="og:url" content="http://yoursite.com/2017/06/10/baidumap/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="百度地图的引入&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://api.map.baidu.com/api?v=2.0&amp;amp;ak=ir7jFwBM0tPkLebXl3ScT9cB&amp;quot;&amp;gt;   &amp;lt;/script&amp;gt;    &amp;lt;script type=&amp;quot;text/javascript&amp;quo">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.982Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="百度地图练习">
+<meta name="twitter:description" content="百度地图的引入&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://api.map.baidu.com/api?v=2.0&amp;amp;ak=ir7jFwBM0tPkLebXl3ScT9cB&amp;quot;&amp;gt;   &amp;lt;/script&amp;gt;    &amp;lt;script type=&amp;quot;text/javascript&amp;quo">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-baidumap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      百度地图练习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="百度地图的引入"><a href="#百度地图的引入" class="headerlink" title="百度地图的引入"></a>百度地图的引入</h3><pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=ir7jFwBM0tPkLebXl3ScT9cB&quot;&gt;
+  &lt;/script&gt;
+
+  &lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js&quot;&gt;&lt;/script&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css&quot; /&gt;
+</code></pre><ol>
+<li>创建地图实例：BMap.Map(“container”)</li>
+</ol>
+<p>创建一个地图实例，container指容器id，之后调用Map.centerAndZoom()方法对地图进行初始化。未进行初始化的地图将不能进行任何操作。</p>
+<ol>
+<li><p>地图经纬度：BMap.Point</p>
+</li>
+<li><p>以指定的经度和纬度创建一个地理点坐标。</p>
+</li>
+<li><p>初始化地图：map.centerAndZoom(center:Point,Zoom:Number)</p>
+</li>
+</ol>
+<p>初始化地图，他有种设置参数方式，一是center类型为Point时，zoom必须赋值，范围3-19级，还有就是如果center类型为字符串时，比如“北京”，zoom可以忽略，地图将自动根据center适配最佳zoom级别。</p>
+<pre><code>window.onload = function(){
+    var map = new BMap.Map(&quot;container&quot;);
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 15); //map.centerAndZoom(&quot;北京&quot;);
+}
+</code></pre><h3 id="为地图批量添加标注-baidumap-html"><a href="#为地图批量添加标注-baidumap-html" class="headerlink" title="为地图批量添加标注(baidumap.html)"></a>为地图批量添加标注(baidumap.html)</h3><ul>
+<li>原理：通过for循环的方式为地图批量添加标注</li>
+<li>设置点的新图标：<ul>
+<li>构造出Icon对象：Icon（url:String,size:Size[,opts:IconOptions]）</li>
+<li>改变图标大小：setImageSize（offset：Size）；</li>
+<li>加载图标到地图上：setIcon（icon：Icon）<a id="more"></a>
+</li>
+</ul>
+</li>
+</ul>
+<p>var marker = new BMap.Marker(point);<br>map.addOverlay(marker);//添加一个覆盖物<br>marker.setAnimation(BMAP_ANIMATION_DROP);<br>var icon = new BMap.Icon(“../marker.png”);</p>
+<h3 id="地图配置"><a href="#地图配置" class="headerlink" title="地图配置"></a>地图配置</h3><p>百度地图提供许多配置方法，地图拖拽、滚轮放大缩小、双击放大、键盘操作等等，默认开启了地图拖拽、双击放大、双指操作缩放、自动适应容器尺寸变化自动适应容器尺寸变化</p>
+<p>开启地图拖拽：map.enableDragging()；<br>禁止地图拖拽：map.disableDragging()；<br>开启滚轮放大缩小：map.enableScrollWheelZoom()；</p>
+<h3 id="控件使用"><a href="#控件使用" class="headerlink" title="控件使用"></a>控件使用</h3><p>百度地图提供控件：平移缩放（NavigationControl）、比例尺（ScaleControl）、缩略地图（OverviewMapControl）、地图类型（MapTypeControl）、版权（CopyrightControl等等。</p>
+<p>1.添加平移缩放控件<br> map.addControl(new BMap.NavigationControl(opts));</p>
+<p>2.改变控件位置<br>Size（width：Number,height:Number）,构造Size对象，width代表水平方向数值，height代表垂直方向数值。</p>
+<p>3.</p>
+<h3 id="事件基础"><a href="#事件基础" class="headerlink" title="事件基础"></a>事件基础</h3><ol>
+<li>百度地图事件包括：地图加载完成事件、地图单击、双击、鼠标移动、拖拽事件、添加控件添加覆盖物事件；</li>
+</ol>
+<p>2.事件参数：百度地图API在事件坚挺函数中传递事件对象e，每个e参数至少包含事件类型（type）和触发该事件的对象（target）。api还把哦哦正函数内的this指向触发（同时也是绑定）事件的API对象。 </p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/10/baidumap/" class="archive-article-date">
+  	<time datetime="2017-06-10T12:54:29.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-10</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/15/hexo1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo常用命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/28/css2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">默认样式总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+<meta name="keywords" content="小彭子的博客,前端学习">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小彭子的博客">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小彭子的博客">
+<meta name="twitter:description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+  
+    <article id="post-bootstraptable" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/17/bootstraptable/">bootstrapTable</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="开始准备"><a href="#开始准备" class="headerlink" title="开始准备"></a>开始准备</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;../plugin/bootstrap/css/bootstrap.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h4&gt;bootstrap-table&lt;/h4&gt;
+
+  &lt;script src=&quot;../plugin/jquery/jquery-3.2.0.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;../plugin/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2018/07/17/bootstraptable/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/07/17/bootstraptable/" class="archive-article-date">
+  	<time datetime="2018-07-17T13:27:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-07-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-edmcquestion" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/15/edmcquestion/">edmcquestion</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>参数解构</li>
+</ul>
+<pre><code>actions: {
+        increment (context) {
+      context.commit(&apos;increment&apos;)
+    }
+  }
+//解构后
+actions: {
+      increment ({ commit }) {
+    commit(&apos;increment&apos;)
+      }
+}
+</code></pre><p>Q:变量的解构赋值</p>
+<ul>
+<li><p>actions中对象形式分发失败</p>
+<pre><code>actions: {
+    reduce(state) {
+      // setTimeout(()=&gt;{
+      //   state.commit(&apos;incrementpayload&apos;);
+      // },20)
+    },
+    reduceobj(state, payload) {
+      state.count += 2;//???该方法执行失败
+      // state.commit(&apos;incrementpayload&apos;);
+    }
+  }
+</code></pre></li>
+</ul>
+<p>Q:action必须配合mutations一起使用吗</p>
+<ul>
+<li><p>对象解构的嵌套结构对象</p>
+<pre><code>let obj = {
+  p: [
+    &apos;Hello&apos;,
+    { y: &apos;World&apos; }
+  ]
+};
+
+let { p, p: [x, { y }] } = obj;
+x // &quot;Hello&quot;
+y // &quot;World&quot;
+p // [&quot;Hello&quot;, {y: &quot;World&quot;}]
+</code></pre></li>
+</ul>
+<p>Q:应该只有一个p变量对象，第2个应该为undefined。<br>A:应该是变量重复赋值</p>
+<ul>
+<li>函数参数的解构</li>
+</ul>
+<p>action函数接收一个<br>         actions: {<br>            increment (context) {<br>              context.commit(‘increment’)<br>            }<br>          }<br>        //参数解构方式<br>        actions: {<br>          increment ({ commit }) {<br>            commit(‘increment’)<br>          }<br>        }</p>
+<p>Q:不明白参数解构方式<br>A:对象解构的转换</p>
+<pre><code>const context = {commit:function(){}}
+const { commit } = { commit:function(){}}
+commit = function(){}
+
+context = {commit};
+commit(&apos;fn&apos;)
+</code></pre><ul>
+<li>action中多个参数</li>
+</ul>
+<p>action中使用参数解构，代码如下</p>
+<pre><code>getList({commit,dispatch},value) {
+    //获取
+      ajax.get(&apos;stationMonitor/queryAll&apos;)()(res =&gt; {
+        commit(&apos;showData&apos;,res);
+      });
+</code></pre><p>Q:this.$store.dispatch(type:’getList’,{参数}) 如果采用mapActions，直接调用this.getList（），这儿的参数该怎么传呢？、</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/05/15/edmcquestion/" class="archive-article-date">
+  	<time datetime="2018-05-15T11:51:18.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-05-15</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-vuex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/11/vuex/">vuex</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/05/11/vuex/" class="archive-article-date">
+  	<time datetime="2018-05-11T02:50:59.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-05-11</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-regx" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/16/regx/">表单中常用正则表达式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>完整参考</p>
+<ul>
+<li><p>只能输入数字</p>
+<pre><code>&lt;input type=&quot;text&quot; onkeyup=&quot;this.value=this.value.replace(/\D/g,&apos;&apos;)&quot; onafterpaste=&quot;this.value=this.value.replace(/\D/g,&apos;&apos;)&quot;&gt;
+
+function sortEdit(value) {
+      var reg = /^[1-9]\d*$/;
+      if (reg.test(value)) {
+          return value;
+      } else {
+          return &apos;&apos;;
+      }
+  }
+  &lt;input onkeyup=&quot;value=sortEdit(value)&quot; type=&quot;text&quot; class=&quot;form-control&quot; value=&quot;2&quot;&gt;
+</code></pre></li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/04/16/regx/" class="archive-article-date">
+  	<time datetime="2018-04-16T08:32:56.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-04-16</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-middle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/08/middle/">css布局——水平垂直居中</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="方法一：display：table和display：table-cell实现多行文本垂直居中"><a href="#方法一：display：table和display：table-cell实现多行文本垂直居中" class="headerlink" title="方法一：display：table和display：table-cell实现多行文本垂直居中"></a>方法一：display：table和display：table-cell实现多行文本垂直居中</h4><p>单行文本垂直居中我们会用line-height，而多行文本垂直水平居中刚如何实现呢？</p>
+<p>效果如下</p>
+<p><img src="http://oibijaovc.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180408112812.png" alt></p>
+<p>css+html</p>
+<pre><code>//父容器和子容器定义样式
+
+.box {
+    display: table;
+    height: 300px;
+    padding: 15px;
+    background-color: paleturquoise;
+    width: 100%;
+}
+
+.introduce {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+//html结构
+
+ &lt;div class=&apos;box&apos;&gt;
+    &lt;div class=&apos;introduce&apos;&gt;
+        &lt;p&gt;你来自哪里&lt;/p&gt;
+        &lt;p&gt;你来自哪里&lt;/p&gt;
+        &lt;p&gt;你来自哪里&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h4 id><a href="#" class="headerlink" title="#"></a>#</h4>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/04/08/middle/" class="archive-article-date">
+  	<time datetime="2018-04-08T02:11:28.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-04-08</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-webpack" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/03/webpack/">webpack</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>创建文件夹初始化并安装webpack</p>
+<pre><code>mkdir project
+npm init
+npm install webpack --save-dev
+</code></pre></li>
+</ol>
+<p>// module.exports = {<br>//     entry:’./app.js’,<br>//     output:{<br>//         filename:’bundle.js’<br>//     }<br>// };</p>
+<p>/**</p>
+<ul>
+<li>入口 entry</li>
+<li><p>*/<br>//单个入口的简写<br>//  const config = {<br>//      entry:’./app.js’<br>//  }</p>
+<p>//单个入口语法完整写法<br>//  const config = {<br>//      entry:{<br>//          main:’./app.js’<br>//      }<br>//  }<br>//多个入口（对象语法）<br>//  const config = {<br>//      entry:{<br>//          app:’/app.js’,<br>//          pageone:’/pageone.js’<br>//      }<br>//  }<br>//  module.exports = config;</p>
+</li>
+</ul>
+<p>/**</p>
+<ul>
+<li>输出 output</li>
+<li>ps:即使多个入口起点，但只指定一个输出配置</li>
+<li>值为一个对象:filename(输出文件的文件名)+path（目标输出目录的绝对路径）</li>
+<li><em>/<br>// const config = {<br>//     output:{<br>//         filename:’bundle.js’,<br>//         path:’/webpack’<br>//     }<br>// }<br>// module.exports = config;<br>/*</em></li>
+<li>loader</li>
+<li>webpack处理css文件或者将typescript转为javascript，首先安装相对应的loader</li>
+<li>npm install –save-dev css-loader</li>
+<li>npm install –save-dev ts-loader</li>
+<li>然后指示webpack对每个d.css使用css-loader,对所有的.ts文件使用ts-loader<br>*/<br>// module.exports= {<br>//     module:{<br>//         rules:[<br>//             {test:/.css$/,use:’css-loader’},<br>//             {test:/.ts$/,use:’ts-loader’}<br>//         ]<br>//     }<br>// }</li>
+</ul>
+<p>/**</p>
+<ul>
+<li>插件是webpack的支柱功能<br><em>/<br>/*</em></li>
+<li>源代码（/src）:书写和编辑的代码</li>
+<li>分发代码（/dist）：构建过程产生的代码最小化和优化后的输出目录<br>*/</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/04/03/webpack/" class="archive-article-date">
+  	<time datetime="2018-04-03T06:39:10.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-04-03</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-express" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/27/express/">使用express框架搭建简单服务器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/77ya/weApp" target="_blank" rel="noopener">gitbub项目地址</a></p>
+<p>开发前准备：安装node.js</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>创建文件，并安装express模块</p>
+<pre><code>$ mkdir wechat 创建wechat文件
+$ cd wechat
+
+$ npm init package.json 文件（存储module模块记录）
+
+$ npm install express --save 安装express并保存到依赖列表中
+</code></pre><p>创建好后目录结构如下</p>
+<h4 id="简单实例-（应用级中间件）"><a href="#简单实例-（应用级中间件）" class="headerlink" title="简单实例 （应用级中间件）"></a>简单实例 （应用级中间件）</h4><p>启动一个服务器，并监听端口3000进入连接请求。</p>
+<p>app.js代码如下：</p>
+<pre><code>var express = require(&quot;express&quot;);
+var app = express();
+
+//app.use(express.static(&apos;web&apos;));//静态文件的目录作为参数传递给express.static中间件 就可以访问静态资源的访问
+
+/**
+ * 增加虚拟路径时，静态页面可以正常访问，当页面增加虚拟路径时，请求链接不变
+ */
+app.use(&quot;/index&quot;,express.static(&apos;web&apos;));
+
+
+//含有字符串 a 的路由,结果返回字符串
+ app.get(/a/,function(req,res,next){
+    console.log(&quot;response will be send by next function&quot;);
+    next();
+ },function(req,res){ 
+     res.send(&quot;这是关于首页的介绍&quot;);
+ });
+
+ /**
+  * 应用级中间件绑定到app对象使用 app.use()和app.METHOD()
+  * METHOD需要处理http请求的方法：get post put等
+  */
+
+//没有挂载的中间件，应用的每个请求都会执行该中间件。
+app.use(function (req, res, next) {
+    console.log(&apos;Time:&apos;, Date.now());
+    next();
+});
+
+/**
+ * app.all() 是一个特殊的路由方法，没有任何 HTTP 方法与其对应，它的作用是对于一个路径上的所有请求加载中间件。
+ */
+app.all(&apos;/allmethod&apos;, function (req, res) {
+    res.send(&quot;all路由方法测试&quot;);
+});
+
+//接口返回json格式  结果封装处理result();
+function result(obj,msg,status){
+    return {
+        data: obj,
+        status: status,
+        msg: msg
+    }
+};
+app.post(&quot;/indexuser&quot;,function(req,res){
+    var obj = result({
+        user: &quot;pauline&quot;,
+        age: &quot;18&quot;,
+        sex: &quot;女&quot;,
+        intro: &quot;web开发&quot;
+    },
+    0,
+    &quot;访问成功&quot;
+    )
+    res.json(obj);
+ });
+
+ /**
+  * get请求带参数name
+  */
+ app.get(&apos;/updata&apos;,function(req,res){
+     res.send(req.params.name);  //暂不明白
+ })
+
+/**
+ * app.route() 创建路由路径的链式路由句柄
+ */
+app.route(&apos;/book&apos;)
+.get(function(req,res){
+    res.send(&apos;这是get请求&apos;);
+})
+.post(function(req,res){
+    res.send(&apos;这是post请求&apos;);
+})
+
+
+
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log(&apos;Example app listening at http://%s:%s&apos;, host, port);
+}) 
+</code></pre><p> index.html js代码如下</p>
+<pre><code>&lt;script&gt;
+        $.post({
+            url: &quot;/indexuser&quot;,
+            success: function (res) {
+                console.log(res);
+                //返回以下json对象
+                // {
+                //     data: {
+                //         user: &quot;pauline&quot;,
+                //         age: &quot;18&quot;,
+                //         sex: &quot;女&quot;,
+                //         intro: &quot;web开发&quot;
+                //     },
+                //     status:0,
+                //     msg:&apos;访问成功&apos;
+                // }
+            }
+        })
+
+        /**
+         * app.route() 创建路由路径的链式路由句柄
+         * 
+        */
+        $.get({
+            url: &apos;/book&apos;,
+            success: function (res) {
+                console.log(res);//这是get请求
+            }
+        });
+        $.post({
+            url: &apos;/book&apos;,
+            success: function (res) {
+                console.log(res);//这是get请求
+            }
+        });
+        /**
+         * 带参数name的get请求
+        */
+         $.get({
+             url:&apos;/updata&apos;,
+             data:{
+                 name:&apos;pauline&apos;
+             },
+             success:function(res){
+                 console.log(`${res}这是get带参数返回结果`);
+             }
+         })
+
+    &lt;/script&gt;
+</code></pre><p>启动服务器</p>
+<pre><code>$ node app.js    
+</code></pre><p>因为增加了虚拟路劲，所以直接访问以下路劲即可：<br>浏览器中访问该路径即可访问:<a href="http://localhost:端口号/page/test.html" target="_blank" rel="noopener">http://localhost:端口号/page/test.html</a></p>
+<h4 id="路由级中间件"><a href="#路由级中间件" class="headerlink" title="路由级中间件"></a>路由级中间件</h4><p>birds.js 代码如下：</p>
+<pre><code>/**
+ * express.Router
+ */
+var express = require(&quot;express&quot;);
+var app = express();
+
+app.use(&quot;/static&quot;, express.static(&apos;web&apos;)); //express.static  是express唯一内置的中间件，负责在express中托管静态资源
+
+/**
+ * 错误处理中间件
+ */
+app.use(function(err,req,res,next){
+    console.log(err.stack);
+    res.status(500).send(&apos;内部错误&apos;);
+})
+/**
+ * 创建一个路由模块
+ */
+var express = require (&apos;express&apos;);
+var router = express.Router(); //它是完整的中间件和路由系统，”mini-app“
+/**
+ * 加载路由级一个中间件
+ */
+router.use(function timelog(req,res,next){
+    console.log(&apos;time:&apos;,Date.now());
+    next();
+})
+/**
+ * 定义一些路由，并且将他们挂载至应用路径上
+ * 定义网站主页的路由
+ */
+router.get(&apos;/&apos;,function(req,res){
+    res.send(&apos;获得菜单信息&apos;);
+});
+/**
+ * 定义about页面的路由
+ */
+router.get(&apos;/about&apos;,function(req,res){
+    res.send(&apos;获得介绍页信息&apos;);
+})
+
+
+
+module.exports = router;
+
+//将路由挂载至应用
+app.use(&apos;/&apos;,router);
+
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log(&apos;Example app listening at http://%s:%s&apos;, host, port);
+}) 
+</code></pre><p>至此，一个express搭建的后台服务器完毕</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/03/27/express/" class="archive-article-date">
+  	<time datetime="2018-03-27T13:08:03.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-27</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ques4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/22/ques4/">Object.prototype.toString.call()判断对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="判断数组还是对象"><a href="#判断数组还是对象" class="headerlink" title="判断数组还是对象"></a>判断数组还是对象</h4><pre><code>function isobjarr(value){
+    if(Object.prototype.toString.call(value)==&quot;[object Array]&quot;){
+        console.log(&quot;数组&quot;);
+    }else if(Object.prototype.toString.call(value)==&quot;[object Object]&quot;){
+        console.log(&quot;对象&quot;);
+    }else{
+        console.log(&quot;都不是&quot;);
+    }
+}
+</code></pre><p><strong>ps：千万不能使用typeof来判断对象和数组，因为这两种类型都会返回”object”。</strong></p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2018/03/22/ques4/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/03/22/ques4/" class="archive-article-date">
+  	<time datetime="2018-03-22T05:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-22</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作问题/">工作问题</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ques3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/22/ques3/">问题汇总</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://obkoro1.com/2018/03/18/3%E6%9C%88%E5%88%9D%E4%B8%8A%E6%B5%B7%E5%89%8D%E7%AB%AF%E9%81%87%E5%88%B0%E7%AC%94%E8%AF%95%E9%A2%98%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AE%B0%E5%BD%95/#more" target="_blank" rel="noopener"><br>原文地址</a></p>
+<h4 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h4><p> 浏览器为了安全实施的同源策略导致的，同源：两个URL的域名、协议、端口要完全相同</p>
+<p>解决方案：</p>
+<p>script标签jsonp跨域、nginx反向代理、nodejs中间件代理跨域、后端在头部信息设置安全域名</p>
+<ul>
+<li>JSONP</li>
+<li>CORS</li>
+<li>服务端代理</li>
+</ul>
+<p>JSONP的原理：</p>
+<p>利用script标签支持跨域的属性，用script标签拿到包裹了数据的方法（相当于是返回了一段js代码），在请求中包含callback，服务端注入参数后返回这个回调函数，然后script标签拿到返回的js代码跨域直接运行回调，需要前后端的配合。</p>
+<p>jsonp不可以用post请求，因为script标签只支持get请求。</p>
+<hr>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2018/03/22/ques3/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/03/22/ques3/" class="archive-article-date">
+  	<time datetime="2018-03-22T05:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-22</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/问题汇总/">问题汇总</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/query/">query</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ques2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/11/ques2/">tab下内容随菜单切换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目的效果：菜单切换，内容也切换，页面跳转会让用户感受到卡顿，所以这种效果通常是在一个页面通过控制目标元素的显示与隐藏来实现的。</p>
+<h4 id="效果图预览"><a href="#效果图预览" class="headerlink" title="效果图预览"></a>效果图预览</h4><p><img src="http://oibijaovc.bkt.clouddn.com/tabchange.gif" alt></p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2018/03/11/ques2/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/03/11/ques2/" class="archive-article-date">
+  	<time datetime="2018-03-11T05:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作问题/">工作问题</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

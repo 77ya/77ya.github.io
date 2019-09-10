@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>深入理解JavaScript系列：闭包（closures） | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文链接：http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html  补充：基本类型和引用类型  基本数据类型ES6 引入了一种新的原始数据类型 Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入理解JavaScript系列：闭包（closures）">
+<meta property="og:url" content="http://yoursite.com/2017/06/27/closure/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="原文链接：http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html  补充：基本类型和引用类型  基本数据类型ES6 引入了一种新的原始数据类型 Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.983Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="深入理解JavaScript系列：闭包（closures）">
+<meta name="twitter:description" content="原文链接：http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html  补充：基本类型和引用类型  基本数据类型ES6 引入了一种新的原始数据类型 Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-closure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      深入理解JavaScript系列：闭包（closures）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原文链接：<a href="http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html" target="_blank" rel="noopener">http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html</a></p>
+<blockquote>
+<p>补充：基本类型和引用类型</p>
+</blockquote>
+<h4 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h4><p>ES6 引入了一种新的原始数据类型 Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。</p>
+<h6 id="typeof：检测一个变量是不是最基本的数据类型"><a href="#typeof：检测一个变量是不是最基本的数据类型" class="headerlink" title="typeof：检测一个变量是不是最基本的数据类型"></a>typeof：检测一个变量是不是最基本的数据类型</h6><pre><code>a = 666;
+typeof a;    // number 
+</code></pre><a id="more"></a>
+<h6 id="约定：基本数据类型与原始数据类型等意。"><a href="#约定：基本数据类型与原始数据类型等意。" class="headerlink" title="约定：基本数据类型与原始数据类型等意。"></a>约定：基本数据类型与原始数据类型等意。</h6><h4 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h4><p>除过上面的 6 种基本数据类型外，剩下的就是引用类型了，统称为 Object 类型。细分的话，有：Object 类型、Array 类型、Date 类型、RegExp 类型、Function 类型 等。</p>
+<p>函数即是数据，函数可以赋值给变量，可以当参数传递给其他函数，可以从函数里返回。</p>
+<pre><code>//高阶函数或函数式函数或者偏数理或操作符
+function exampleFunc(funArg) {
+  funArg();
+}
+
+exampleFunc(function () {
+  console.log(&apos;funArg&apos;);
+});
+</code></pre><blockquote>
+<p>funarg的实际参数其实是传递给exampleFunc的匿名函数。</p>
+</blockquote>
+<pre><code>(function functionValued() {
+  return function () {
+    console.log(&apos;returned function is called&apos;);
+  };
+})()();
+</code></pre><blockquote>
+<p>函数不仅可以作为参数，还可以作为返回值。这类以函数为返回值的函数称为带函数值的函数（functions with functional value or function valued functions）。</p>
+</blockquote>
+<ul>
+<li>第一类函数或第一类对象（作为正常数据存在：函数传递、接受函数式参数、以函数值返回）</li>
+<li>自应用函数（接受自己作为参数的函数）</li>
+</ul>
+<pre><code>(function selfApplicative(funArg) {
+//逻辑运算符优先级比关系运算符高
+  if (funArg &amp;&amp; funArg === selfApplicative) {
+    console.log(&apos;self-applicative&apos;);
+    return;//条件满足，跳出条件所在的方法
+  }
+
+  selfApplicative(selfApplicative);
+
+})();
+</code></pre><ul>
+<li>自复制函数（以自己为返回值的元素）</li>
+</ul>
+<pre><code> (function selfReplicative() {
+  return selfReplicative;
+})();
+</code></pre><blockquote>
+<p>自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量（对于innnerFn函数来讲，localVar是自由变量）</p>
+</blockquote>
+<pre><code>function testFn() {
+
+  var localVar = 10;
+
+  function innerFn(innerParam) {
+    console.log(innerParam + localVar);
+  }
+
+  return innerFn;
+}
+
+var someFn = testFn();
+someFn(20); // 30
+</code></pre><h1 id="动态作用域和静态作用域是什么、伪代码、call、"><a href="#动态作用域和静态作用域是什么、伪代码、call、" class="headerlink" title="动态作用域和静态作用域是什么、伪代码、call、"></a>动态作用域和静态作用域是什么、伪代码、call、</h1><blockquote>
+<p>补充</p>
+<h5 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h5><p>语法：test ? expression1 : expression2</p>
+</blockquote>
+<p>test:任何boolean表达式</p>
+<p>express1：true，返回表达式，可能是逗号表达式</p>
+<p>express2:false,返回表达式。可以使用逗号表达式链接多个表达式。</p>
+<p>例如：</p>
+<pre><code>function foo(x){
+    return(x%2 != 0 ? &apos;yes&apos;:&apos;no&apos;) 
+}
+console.log(foo(2));//no
+</code></pre><h4 id="i-与-i"><a href="#i-与-i" class="headerlink" title="i++ 与 ++i"></a>i++ 与 ++i</h4><ul>
+<li>i++ 返回原来的值，++i 返回加1后的值。</li>
+<li>i++ 不能作为左值，而++i 可以。</li>
+</ul>
+<pre><code>function Foo(){
+     var i=0;
+     return function(){
+         console.log(i++);//先打印再执行
+         console.log(++i);//先执行再打印
+     }
+}
+var f1=Foo();
+f1();// 0 2
+</code></pre><h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><blockquote>
+<p>闭包是代码块和创建该代码块的上下文数据的结合</p>
+</blockquote>
+<p>经典闭包：</p>
+<pre><code>for(var i = 0;i&lt;5;i++){
+    console.log(i); // 0 1 2 3 4 
+    setTimeout(function(){
+        console.log(i)  // 5 5 5 5 5
+    },0)
+}
+</code></pre><p>解决方案：</p>
+<pre><code>for(var i = 0;i&lt;5;i++){
+    console.log(i); // 0 1 2 3 4 
+    (function(i){
+        setTimeout(function(){
+            console.log(i)  // 0 1 2 3 4
+        },0)
+    })(i)
+}
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/27/closure/" class="archive-article-date">
+  	<time datetime="2017-06-27T02:42:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-27</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/07/03/variable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          深入理解JavaScript系列：变量对象（Variable Object）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/26/function1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深入理解JavaScript系列：函数（function）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

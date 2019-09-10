@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>牛客网做题知识点总结 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="window全局对象每个JavaScript环境有一个全局对象，当你在任意的函数外面使用this的时候可以访问到。你创建的每一个全部变量都成了这个全局对象的属性">
+<meta name="keywords" content="javascript,html,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="牛客网做题知识点总结">
+<meta property="og:url" content="http://yoursite.com/2017/07/12/niuke/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="window全局对象每个JavaScript环境有一个全局对象，当你在任意的函数外面使用this的时候可以访问到。你创建的每一个全部变量都成了这个全局对象的属性">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.996Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="牛客网做题知识点总结">
+<meta name="twitter:description" content="window全局对象每个JavaScript环境有一个全局对象，当你在任意的函数外面使用this的时候可以访问到。你创建的每一个全部变量都成了这个全局对象的属性">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-niuke" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      牛客网做题知识点总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="window全局对象"><a href="#window全局对象" class="headerlink" title="window全局对象"></a>window全局对象</h5><p>每个JavaScript环境有一个全局对象，当你在任意的函数外面使用this的时候可以访问到。你创建的每一个全部变量都成了这个全局对象的属性</p>
+<a id="more"></a>
+<blockquote>
+<p>window是浏览对象，要在浏览器下访问</p>
+</blockquote>
+<p>global = ‘hello’;<br>console.log(global); //hello<br>console.log(window.global);  //hello<br>console.log(this.global);  //hello<br>console.log(window[‘global’]);  //hello</p>
+<h5 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout"></a>setTimeout</h5><pre><code>console.log(1);
+setTimeout(function(){
+    console.log(2);
+},0);
+console.log(3);
+
+上述代码的执行结果：1，3，2；
+</code></pre><blockquote>
+<p>回调时，被回调的函数会被放在event loop里，等待线程里的任务执行完后才执行event loop里的代码。 因此，上述代码会先把线程里的执行完后，再执行event loop里的setTimeout函数.。</p>
+</blockquote>
+<h5 id="载入数据"><a href="#载入数据" class="headerlink" title="载入数据"></a>载入数据</h5><p>A.ajax() 方法通过 HTTP 请求加载远程数据。$.ajax(opts);opts为json格式，常见参数url、type、data等。</p>
+<p>B.load() 方法从服务器加载数据，并把返回的数据放入被选元素中。$(selector).load(URL,data,callback);<br>必需的 URL 参数规定您希望加载的 URL。<br>可选的 data 参数规定与请求一同发送的查询字符串键/值对集合。<br>可选的 callback 参数是 load() 方法完成后所执行的函数名称。</p>
+<p>C.$.get() 方法通过 HTTP GET 请求从服务器上请求数据。<br>$.get(URL,callback);<br>必需的 URL 参数规定您希望请求的 URL。<br>可选的 callback 参数是请求成功后所执行的函数名。</p>
+<p>D.getScript() 方法通过 HTTP GET 请求载入并执行 JavaScript 文件。<br>jQuery.getScript(url,success(response,status));</p>
+<h5 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h5><p>javascript 语言特性中，有很多方面和我们接触的其他编程语言不太一样，比如说，javascript语言实现继承机制的核心就是<b>prototype</b>，而不是Java语言那样的类式继承。Javascript 解析引擎在读取一个Object的属性的值时，会沿着<b>原型链</b> 向上寻找，如果最终没有找到，则该属性值为 <b>undefined</b> ； 如果最终找到该属性的值，则返回结果。与这个过程不同的是，当javascript解析引擎执行“给一个Object的某个属性赋值”的时候，如果当前Object存在该属性，则改写该属性的值，如果当前的Object本身并不存在该属性，则赋值该属性的值 。</p>
+<h5 id="defer属性：延迟脚本执行，只支持IE浏览器"><a href="#defer属性：延迟脚本执行，只支持IE浏览器" class="headerlink" title="defer属性：延迟脚本执行，只支持IE浏览器"></a>defer属性：延迟脚本执行，只支持IE浏览器</h5><h5 id="js基本数据类型（6种原始类型-Object）-String-Boolean-Number-Null-Undefined-Symbol和Object"><a href="#js基本数据类型（6种原始类型-Object）-String-Boolean-Number-Null-Undefined-Symbol和Object" class="headerlink" title="js基本数据类型（6种原始类型+Object）:String Boolean Number Null Undefined Symbol和Object"></a>js基本数据类型（6种原始类型+Object）:String Boolean Number Null Undefined Symbol和Object</h5><h5 id="js获取select下拉框的值："><a href="#js获取select下拉框的值：" class="headerlink" title="js获取select下拉框的值："></a>js获取select下拉框的值：</h5><pre><code>&lt;form action=&quot;&quot;&gt;
+    &lt;select name=&quot;&quot; id=&quot;&quot;&gt;
+        &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+        &lt;option value=&quot;1&quot; selected=&quot;selected&quot;&gt;2&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;3&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;4&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+&lt;script&gt;
+    //javascript
+    var obj = document.getElementsByTagName(&apos;select&apos;)[0]; //select
+    console.log(obj);
+    var index = obj.selectedIndex;//属性可设置或返回下拉列表中被选选项的索引号。
+    console.log(index)
+    var text = obj.options[index].text; // 选中文本
+    var value = obj.options[index].value; // 选中值
+
+    //jquery    
+    var obj = $(&apos;select&apos;);
+    var text = obj.find(&apos;option:selected&apos;).text();
+    var value = obj.find(&apos;option:selected&apos;).val();
+&lt;/script&gt;
+</code></pre><h5 id="解释语言的特性：非独立、效率低"><a href="#解释语言的特性：非独立、效率低" class="headerlink" title="解释语言的特性：非独立、效率低"></a>解释语言的特性：非独立、效率低</h5><p>解释性语言和编译性语言的定义：<br>计算机不能直接理解高级语言，只能直接理解机器语言，所以必须要把高级语言翻译成机器语言，计算机才能执行高级语言编写的程序。<br>翻译的方式有两种，一个是编译，一个是解释。两种方式只是翻译的时间不同。</p>
+<p>解释性语言的定义：<br>解释性语言的程序不需要编译，在运行程序的时候才翻译，每个语句都是执行的时候才翻译。这样解释性语言每执行一次就需要逐行翻译一次，效率比较低。<br>现代解释性语言通常把源程序编译成中间代码，然后用解释器把中间代码一条条翻译成目标机器代码，一条条执行。</p>
+<p>编译性语言的定义：<br>编译性语言写的程序在被执行之前，需要一个专门的编译过程，把程序编译成为机器语言的文件，比如exe文件，以后要运行的话就不用重新翻译了，直接使用编译的结果就行了（exe文件），因为翻译只做了一次，运行时不需要翻译，所以编译型语言的程序执行效率高。</p>
+<p>非独立：JavaScript语言依赖执行环境，对于客户端来说是浏览器，对于服务端来说是node。<br>效率低：执行前不需要编译，执行时才编译，因此效率低。</p>
+<h6 id="angularjs1中的服务实质上是：单例对象"><a href="#angularjs1中的服务实质上是：单例对象" class="headerlink" title="angularjs1中的服务实质上是：单例对象"></a>angularjs1中的服务实质上是：单例对象</h6><h6 id="var-obj-声明obj为正则对象"><a href="#var-obj-声明obj为正则对象" class="headerlink" title="var obj=/ /;声明obj为正则对象"></a>var obj=/ /;声明obj为正则对象</h6><h6 id="跨域：通过iframe设置document-domain可以实现跨域"><a href="#跨域：通过iframe设置document-domain可以实现跨域" class="headerlink" title="跨域：通过iframe设置document.domain可以实现跨域"></a>跨域：通过iframe设置document.domain可以实现跨域</h6><h6 id="javascript-标准事件模型：事件捕获-事件处理-事件冒泡"><a href="#javascript-标准事件模型：事件捕获-事件处理-事件冒泡" class="headerlink" title="javascript 标准事件模型：事件捕获-事件处理-事件冒泡"></a>javascript 标准事件模型：事件捕获-事件处理-事件冒泡</h6><h6 id="call和apply"><a href="#call和apply" class="headerlink" title="call和apply"></a>call和apply</h6><p>call与apply都属于Function.prototype的一个方法，所以每个function实例都有call、apply属性</p>
+<p>apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入</p>
+<p>call传入的则是直接的参数列表。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。</p>
+<h5 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h5><p>mozilla内核 (firefox,flock等)     -moz<br>                                                      webkit内核(safari,chrome等)   -webkit<br>                                                      opera内核(opera浏览器)         -o<br>                                                      trident内核(ie浏览器)               -ms</p>
+<h5 id="margin、padding百分比依据父容器宽度，注意是宽度"><a href="#margin、padding百分比依据父容器宽度，注意是宽度" class="headerlink" title="margin、padding百分比依据父容器宽度，注意是宽度"></a>margin、padding百分比依据父容器宽度，注意是宽度</h5><h4 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h4><p>域名系统（英文：Domain Name System，缩写：DNS）是因特网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP端口53。当前，对于每一级域名长度的限制是63个字符，域名总长度则不能超过253个字符</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/07/12/niuke/" class="archive-article-date">
+  	<time datetime="2017-07-12T13:43:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-12</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/07/18/and/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js中逻辑运算符：与、且
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/06/ques/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端疑难杂症集锦</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

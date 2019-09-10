@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>深入理解JavaScript系列：变量对象（Variable Object） | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="点击查看原文 枚举对象用hasOwnProperty过滤原型方法一： var obj = {     name:&amp;apos;tony&amp;apos;,     age:&amp;apos;12&amp;apos; } for(i in obj){     if(obj.hasOwnProperty(i)){  //过滤原型链中继承的属性         console.log(obj[i]) //tony,12">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入理解JavaScript系列：变量对象（Variable Object）">
+<meta property="og:url" content="http://yoursite.com/2017/07/03/variable/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="点击查看原文 枚举对象用hasOwnProperty过滤原型方法一： var obj = {     name:&amp;apos;tony&amp;apos;,     age:&amp;apos;12&amp;apos; } for(i in obj){     if(obj.hasOwnProperty(i)){  //过滤原型链中继承的属性         console.log(obj[i]) //tony,12">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:56.006Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="深入理解JavaScript系列：变量对象（Variable Object）">
+<meta name="twitter:description" content="点击查看原文 枚举对象用hasOwnProperty过滤原型方法一： var obj = {     name:&amp;apos;tony&amp;apos;,     age:&amp;apos;12&amp;apos; } for(i in obj){     if(obj.hasOwnProperty(i)){  //过滤原型链中继承的属性         console.log(obj[i]) //tony,12">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-variable" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      深入理解JavaScript系列：变量对象（Variable Object）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html" target="_blank" rel="noopener">点击查看原文</a></p>
+<h5 id="枚举对象用hasOwnProperty过滤原型"><a href="#枚举对象用hasOwnProperty过滤原型" class="headerlink" title="枚举对象用hasOwnProperty过滤原型"></a>枚举对象用hasOwnProperty过滤原型</h5><p>方法一：</p>
+<pre><code>var obj = {
+    name:&apos;tony&apos;,
+    age:&apos;12&apos;
+}
+for(i in obj){
+    if(obj.hasOwnProperty(i)){  //过滤原型链中继承的属性
+        console.log(obj[i]) //tony,12
+    }
+}
+</code></pre><a id="more"></a>
+<p>方法二：</p>
+<pre><code>var obj = {
+    name:&apos;tony&apos;,
+    age:&apos;12&apos;
+}
+var i,
+    hasown = Object.prototype.hasOwnProperty;
+for(i in obj){
+    if(hasown.call(obj,i)){  //过滤
+        console.log(i) // name age
+    }
+}
+</code></pre><h3 id="变量与执行上下文的关系"><a href="#变量与执行上下文的关系" class="headerlink" title="变量与执行上下文的关系"></a>变量与执行上下文的关系</h3><pre><code>var a = 1;
+(function(){
+    var b=11;
+})();
+console.log(a) //1
+console.log(b) //b is not defined
+</code></pre><blockquote>
+<p>for循环并不能创建一个局部的上下文</p>
+</blockquote>
+<pre><code>for (var i in {name:&apos;彭迎&apos;,age:&apos;11&apos;}){
+    // console.log(i) // name age
+}
+console.log(i) //age    循环已结束，但变量i依然在当前作用域
+</code></pre><h3 id="数据申明"><a href="#数据申明" class="headerlink" title="数据申明"></a>数据申明</h3><blockquote>
+<p>如果变量与执行上下文相关，那变量自己应该知道它的数据存储在哪里，并且知道如何访问。这种机制称为变量对象(variable object)。缩写VO。</p>
+</blockquote>
+<h5 id="变量对象定义"><a href="#变量对象定义" class="headerlink" title="变量对象定义"></a>变量对象定义</h5><p>变量对象（VO）是一个与执行上下文相关的特殊对象，它储存着在上下文中声明的以下内容：</p>
+<ul>
+<li>变量（var,变量声明）</li>
+<li>函数声明</li>
+<li>函数的形参</li>
+</ul>
+<h5 id="上下文类型一：全局上下文中的变量对象-有疑问"><a href="#上下文类型一：全局上下文中的变量对象-有疑问" class="headerlink" title="上下文类型一：全局上下文中的变量对象(有疑问)"></a>上下文类型一：全局上下文中的变量对象(有疑问)</h5><blockquote>
+<p>全局对象(Global object) 是在进入任何执行上下文之前就已经创建了的对象；<br>这个对象只存在一份，它的属性在程序中任何地方都可以访问，全局对象的生命周期终止于程序退出那一刻。</p>
+</blockquote>
+<pre><code>var a = new String(&apos;test&apos;);
+
+alert(a); // 直接访问，在VO(globalContext)里找到：&quot;test&quot;
+
+alert(window[&apos;a&apos;]); // 间接通过global访问：global === VO(globalContext): &quot;test&quot;
+alert(a === this.a); // true
+
+var aKey = &apos;a&apos;;
+alert(window[aKey]); // 间接通过动态属性名称访问：&quot;test&quot;
+</code></pre><h5 id="上下文类型二：函数上下文中的变量对象"><a href="#上下文类型二：函数上下文中的变量对象" class="headerlink" title="上下文类型二：函数上下文中的变量对象"></a>上下文类型二：函数上下文中的变量对象</h5><blockquote>
+<p>在函数执行上下文中，VO是不能直接访问的，此时由活动对象(activation object,缩写为AO)扮演VO的角色。</p>
+</blockquote>
+<h6 id="VO-functionContext-AO"><a href="#VO-functionContext-AO" class="headerlink" title="VO(functionContext) === AO;"></a>VO(functionContext) === AO;</h6><blockquote>
+<p>活动对象是在进入函数上下文时刻被创建的，它通过函数的arguments属性初始化。arguments属性的值是Arguments对象<br>Arguments对象是活动对象的一个属性，它包括如下属性：</p>
+</blockquote>
+<ul>
+<li>callee — 指向当前函数的引用</li>
+<li>length — 真正传递的参数个数</li>
+<li>properties-indexes (字符串类型的整数) 属性的值就是函数的参数值(按参数列表从左到右排列)。 properties-indexes内部元素的个数等于arguments.length. properties-indexes 的值和实际传递进来的参数之间是共享的。</li>
+</ul>
+<h5 id="处理上下文代码的2个阶段"><a href="#处理上下文代码的2个阶段" class="headerlink" title="处理上下文代码的2个阶段"></a>处理上下文代码的2个阶段</h5><blockquote>
+<p>执行上下文的代码被分成两个基本的阶段处理，变量对象的修改变化与这两个阶段紧密相关</p>
+</blockquote>
+<ul>
+<li>进入执行上下文</li>
+<li>执行代码</li>
+</ul>
+<h5 id="关于变量"><a href="#关于变量" class="headerlink" title="关于变量"></a>关于变量</h5><blockquote>
+<p>任何时候，变量只能通过使用var关键字才能声明</p>
+</blockquote>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/07/03/variable/" class="archive-article-date">
+  	<time datetime="2017-07-03T02:31:18.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-03</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/07/04/scope/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          深入理解JavaScript系列:作用域链（scope chain）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/27/closure/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深入理解JavaScript系列：闭包（closures）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

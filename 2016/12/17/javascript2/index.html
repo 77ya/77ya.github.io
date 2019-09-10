@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>初识对象 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简单认识对象创建对象使用new构造函数 var obj = new Object();  obj.name = &amp;quot;MangGuo&amp;quot;;  obj.age = 25; 使用对象字面量表示法 var obj = {     name : &amp;quot;MangGuo&amp;quot;, //name是属性名，&amp;quot;MangGuo&amp;quot;是值     age : 25 }">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识对象">
+<meta property="og:url" content="http://yoursite.com/2016/12/17/javascript2/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="简单认识对象创建对象使用new构造函数 var obj = new Object();  obj.name = &amp;quot;MangGuo&amp;quot;;  obj.age = 25; 使用对象字面量表示法 var obj = {     name : &amp;quot;MangGuo&amp;quot;, //name是属性名，&amp;quot;MangGuo&amp;quot;是值     age : 25 }">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:55.992Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初识对象">
+<meta name="twitter:description" content="简单认识对象创建对象使用new构造函数 var obj = new Object();  obj.name = &amp;quot;MangGuo&amp;quot;;  obj.age = 25; 使用对象字面量表示法 var obj = {     name : &amp;quot;MangGuo&amp;quot;, //name是属性名，&amp;quot;MangGuo&amp;quot;是值     age : 25 }">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-javascript2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      初识对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简单认识对象"><a href="#简单认识对象" class="headerlink" title="简单认识对象"></a>简单认识对象</h2><h5 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h5><p>使用new构造函数</p>
+<pre><code>var obj = new Object(); 
+obj.name = &quot;MangGuo&quot;; 
+obj.age = 25;
+</code></pre><p>使用对象字面量表示法</p>
+<pre><code>var obj = {
+    name : &quot;MangGuo&quot;, //name是属性名，&quot;MangGuo&quot;是值
+    age : 25
+}
+</code></pre><a id="more"></a>
+<h5 id="访问属性"><a href="#访问属性" class="headerlink" title="访问属性"></a>访问属性</h5><pre><code>var cat = {
+    &quot;name&quot;: &quot;tom&quot;,
+    &quot;sex&quot;: &quot;man&quot;,
+    &quot;color&quot;: &quot;yellow&quot;
+}
+var name1 = cat.name; //通过点操作符来访问对象属性
+var name2 = cat[&quot;name&quot;]; //通过中括号操作符来访问对象属性
+</code></pre><h5 id="删除属性"><a href="#删除属性" class="headerlink" title="删除属性"></a>删除属性</h5><pre><code>var cat = {
+    &quot;name&quot;: &quot;tom&quot;,
+    &quot;sex&quot;: &quot;man&quot;,
+    &quot;color&quot;: &quot;yellow&quot;
+}
+delete cat.name;
+cat.sex = undefined;
+cat.color = null;
+alert(&quot;name属性是否存在：&quot; + cat.hasOwnProperty(&quot;name&quot;));  //false
+alert(&quot;sex属性是否存在：&quot; + cat.hasOwnProperty(&quot;sex&quot;));  //true
+alert(&quot;color属性是否存在：&quot; + cat.hasOwnProperty(&quot;color&quot;));  //true
+</code></pre><p>PS: hasOwnProperty函数是判断某个属性是否存在于某个对象当中。</p>
+<h5 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h5><pre><code>var sum = {
+  name: &quot;汇智网&quot;,
+  type: &quot;加法&quot;
+}
+Object.prototype.add = function(){
+  alert(&quot;原型对象的方法&quot;);
+}
+sum.add(); // =&gt;原型对象的方法
+</code></pre><h5 id="属性遍历"><a href="#属性遍历" class="headerlink" title="属性遍历"></a>属性遍历</h5><pre><code>var cat = {
+    &quot;name&quot;: &quot;小白&quot;,
+    &quot;type&quot;: &quot;汇智网&quot;,
+    &quot;eat&quot;: function(){
+    alert(&quot;吃老鼠&quot;);
+    }
+}
+Object.prototype.color = &quot;白色&quot;;
+var name;
+for(name in cat){
+    document.write(cat[name] + &quot;\n&quot;);
+}
+</code></pre><h5 id="in操作符，针对Object（对象操作），不是数组"><a href="#in操作符，针对Object（对象操作），不是数组" class="headerlink" title="in操作符，针对Object（对象操作），不是数组"></a>in操作符，针对Object（对象操作），不是数组</h5><h1 id="对象、数组、函数简单了解"><a href="#对象、数组、函数简单了解" class="headerlink" title="对象、数组、函数简单了解"></a>对象、数组、函数简单了解</h1><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><pre><code>var arr = new Array();
+var arr = [&quot;cat&quot;, &quot;dog&quot;, &quot;mouse&quot;];
+</code></pre><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数声明</p>
+<pre><code>alert(sum(3,11));  //弹出14
+function sum(x, y) {
+    return x + y;
+}
+</code></pre><p> 函数表达式</p>
+<pre><code>alert(sum(3,11);   // unexpected identifier 意外标识符错误
+var sum = function (x, y) {
+    return x + y;
+}
+</code></pre><p>ps：因为在执行到函数所在的语句之前，变量sum 中不会保存有对函数的引用；而且由于第一行代码就会报错，也不会执行到下一行。</p>
+<h3 id="作为值的函数"><a href="#作为值的函数" class="headerlink" title="作为值的函数"></a>作为值的函数</h3><pre><code>//函数+参数
+function funcName(someFunc,someParam){
+    return someFunc(someParam);
+}
+//函数sum()
+function sum(num){
+    return num+3;
+}
+var result = funcName(sum,5);
+alert(result);//8
+</code></pre><h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><p>JavaScript函数在定义时并不会去执行，只有我们在调用定义的函数时，它才会去执行。<br>四种方式调用函数，如下：</p>
+<ul>
+<li>方法调用模式；</li>
+<li>函数调用模式；</li>
+<li>构造器调用模式；</li>
+<li>apply调用模式；</li>
+</ul>
+<h5 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h5><p>当函数被保存为对象的一个属性时，我们称它为一个方法。</p>
+<pre><code>var myObj = {//对象字面量 （有疑问）
+    param1: 1,
+    param2: 2,
+    sum: function (){
+    //this关键字指代当前的对象
+    return this.result = this.param1 + this.param2; 
+    }
+}
+console.log(myObj.sum()); 
+</code></pre><h5 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h5><p>属于全局是调用，即通常通常的函数调用。<br>    //函数一<br>    var add = function(a,b){<br>      return a + b;<br>    }<br>    add(1,2);<br>    //函数二<br>    function add(a,b){<br>      return a + b;<br>    }<br>    add(1,2);</p>
+<h5 id="构造器调用函数"><a href="#构造器调用函数" class="headerlink" title="构造器调用函数"></a>构造器调用函数</h5><p>将函数作为构造器的来使用的语法就是在函数调用前面加上new关键字。</p>
+<pre><code>var add = function() {
+    this.name = &quot;hello&quot;;
+    this.sum = function (a, b){
+        return a + b;
+    }
+}
+// 构造器调用模式
+var obj = new add(); //obj是一个对象
+document.write(obj.sum(1,2)) //==&gt;3
+</code></pre><h5 id="apply调用模式"><a href="#apply调用模式" class="headerlink" title="apply调用模式"></a>apply调用模式</h5><p>js中函数也是对象。call()和apply()用来间接的调用函数。称之为apply调用模式。</p>
+<p>apply()方法让我们构建一个<font color="#ff0000" size="3">参数数组</font>传递给调用函数。它也允许我们选择this的值。apply()方法接收两个参数，第一个是要绑定给<font color="#ff0000" size="3">this的值</font>，第二个就是一个<font color="#ff0000" size="3">参数数组</font>。</p>
+<p>语法：<font color="#ff0000" size="3">函数名.apply(对象，参数数组)；</font></p>
+<pre><code>//apply()方法
+var add = function (a, b) {
+    return a + b;
+}
+
+add.apply(null,[1,2]);  //=&gt;3
+</code></pre><font color="#0000ff" size="3">有疑问：null改变无变化</font>
+
+<h5 id="call-方法"><a href="#call-方法" class="headerlink" title="call()方法"></a>call()方法</h5><p>call()方法和apply()方法类似，<font color="#ff0000" size="3">区别在第二参数不是一个数组是需要列举出来的</font>。上述代码用call方法实现。<br>    var add = function(a,b){<br>        return a + b;<br>    }<br>    add.call(null,1,2)//=&gt;3</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/17/javascript2/" class="archive-article-date">
+  	<time datetime="2016-12-17T07:20:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/20/js-click/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          移动端实现类似hover事件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/13/javascript1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">认识javascript</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

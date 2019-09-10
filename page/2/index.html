@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+<meta name="keywords" content="小彭子的博客,前端学习">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小彭子的博客">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小彭子的博客">
+<meta name="twitter:description" content="小彭子 94年妹子一枚 博客记录前端知识学习笔记和平时生活七七八八">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+  
+    <article id="post-ques1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/11/ques1/">new Date 在ios上的兼容</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>new Date（），开发中经常用到的方法，今天在做微信服务号开发发现居然在ios上有兼容问题，在此记录下解决方案。</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/12/11/ques1/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/12/11/ques1/" class="archive-article-date">
+  	<time datetime="2017-12-11T05:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-12-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作问题/">工作问题</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-validate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/23/validate/">jQuery validate学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目前手头上正在做的一个项目是关于微信服务号的，所以这个validate验证基于WEUI样式库的。</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/10/23/validate/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/10/23/validate/" class="archive-article-date">
+  	<time datetime="2017-10-23T06:17:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-10-23</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery-validate/">jquery validate</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-closest" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/23/closest/">模拟菜单选中效果</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当被最接近的李彪元素或其子后代元素被点击时，会切换背景颜色，之前写这种效果用的removeClaa和addClass，今天发现了一个更简洁的方法。直接上代码吧！</p>
+<pre><code>&lt;style&gt;
+    .pink{background-color: pink;}
+    li{margin-top:10px;}
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;ul id=&quot;box&quot;&gt;
+        &lt;li&gt;第一行&lt;/li&gt;
+        &lt;li&gt;第二行&lt;/li&gt;
+        &lt;li&gt;第三行&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;script src=&quot;https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        //菜单点击标识 clisest从当前元素开始向上遍历
+        $(document).bind(&quot;click&quot;,function(e){
+            $(e.target).closest(&quot;li&quot;).toggleClass(&quot;pink&quot;);
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/10/23/closest/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/10/23/closest/" class="archive-article-date">
+  	<time datetime="2017-10-23T06:17:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-10-23</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css选择器-html/">css选择器 html</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-json" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/18/json/">json.parse()和json.stringify()</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="parse（）"><a href="#parse（）" class="headerlink" title="parse（）"></a>parse（）</h4><p>字符串解析为json对象<font color="#ff7f50">单引号写在{}外，每个属性名都必须用双引号</font></p>
+<pre><code>var str = &apos;{&quot;name&quot;:&quot;jone&quot;,&quot;age&quot;:&quot;18&quot;}&apos;
+JSON.parse(str);
+//结果
+name:&quot;jone&quot;,
+age:&quot;18&quot;
+</code></pre><h4 id="stringify（）"><a href="#stringify（）" class="headerlink" title="stringify（）"></a>stringify（）</h4><p>对象解析成字符串</p>
+<pre><code>var a = {name:&quot;jone&quot;,age:&quot;18&quot;}
+JSON.stringify(a)
+//结果
+&apos;{name:&quot;jone&quot;,age:&quot;18&quot;}&apos;
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/10/18/json/" class="archive-article-date">
+  	<time datetime="2017-10-18T15:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-10-18</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-vue1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/vue1/">初识vue</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>vue data 的简单操作</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/09/20/vue1/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/09/20/vue1/" class="archive-article-date">
+  	<time datetime="2017-09-20T15:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-09-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-localStorage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/04/localStorage/">localStorage和sessionStorage的用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>localStorage:没有时间限制</li>
+<li>sessionStorage：针对一个session的数据存储，关闭浏览器即被清除。</li>
+</ul>
+<h4 id="localStorage属性"><a href="#localStorage属性" class="headerlink" title="localStorage属性"></a>localStorage属性</h4><p>不涉及到登录业务时采用此存储方式，有存储定有值。</p>
+<pre><code>localStorage.setItem(&apos;openid&apos;,&apos;aaa&apos;);
+localStorage.getItem(&apos;openid&apos;);//aaa
+</code></pre><p>API</p>
+<pre><code>localStorage.getItem(‘key’,’val’) - 取得 
+localStorage.setItem(‘key’) - 设置 
+localStorage.removeItem(‘key’) - 移除 
+localStorage.key(0) - 取key值 
+localStorage.clear() - 清空
+</code></pre><h4 id="sessionStorage属性"><a href="#sessionStorage属性" class="headerlink" title="sessionStorage属性"></a>sessionStorage属性</h4><p>后台登录管理系统，必须从登录页面跳转实现，登录页面存储，后面页面取值。即实现登录功能。有存储重新打开无值。</p>
+<h5 id="单个储存"><a href="#单个储存" class="headerlink" title="单个储存"></a>单个储存</h5><pre><code>sessionStorage.setItem(&apos;openid&apos;,&apos;aaa&apos;);
+sessionStorage.getItem(&apos;openid&apos;);//aaa
+</code></pre><h5 id="多个变量对象储存"><a href="#多个变量对象储存" class="headerlink" title="多个变量对象储存"></a>多个变量对象储存</h5><p><a href="https://77ya.github.io/2017/10/18/json/" target="_blank" rel="noopener"><strong>ps：</strong> 对象储存需要用JSON.stringify()方法转为json字符串，取出的时候需要用JSON.parse()<br>转为json对象(sessionStorage,localStorage)</a></p>
+<pre><code> var data = {
+   &quot;url&quot;:&quot;1233&quot;,
+   &quot;age&quot;:2,
+   &quot;sex&quot;:&quot;女&quot;
+ }
+ sessionStorage.setItem(&quot;mydata&quot;,JSON.stringify(data)); //json对象转为字符串对象
+var mydata =  sessionStorage.getItem(&quot;mydata&quot;);
+ var result = JSON.parse(mydata)
+ console.log(result);
+</code></pre><h4 id="cookie和localstorage有什么区别"><a href="#cookie和localstorage有什么区别" class="headerlink" title="cookie和localstorage有什么区别"></a>cookie和localstorage有什么区别</h4><ul>
+<li>cookie数据大小不能超过4k</li>
+<li>cookie在服务端和客户端之间来回传递</li>
+<li>cookie可以设置很多属性，max-age，path，expires等</li>
+<li>localStorage存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
+<li>localStorage存储的数据容量更大</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/09/04/localStorage/" class="archive-article-date">
+  	<time datetime="2017-09-04T07:28:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-09-04</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-select" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/03/select/">select下拉值的选取</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> select的下拉框的值一般通过value直接获取就可以，但在项目中遇到了需要设置特定选项的选取，这时可以采用 selectedIndex 属性。</p>
+<h4 id="直接获取"><a href="#直接获取" class="headerlink" title="直接获取"></a>直接获取</h4><p>js方法</p>
+<pre><code>var obj = document.getElementsByTagName(&apos;select&apos;)[0]; //select
+obj.value();
+</code></pre><p>jquery方法</p>
+<pre><code>var obj = $(&apos;select&apos;);
+obj.val();
+//或者将fn（）绑定select节点的onchange事件
+function fn(){
+    var obj = $(&apos;select&apos;);
+    var text = obj.find(&apos;option:selected&apos;).text();
+    var value = obj.find(&apos;option:selected&apos;).val();
+}
+</code></pre>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/09/03/select/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/09/03/select/" class="archive-article-date">
+  	<time datetime="2017-09-03T12:27:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-09-03</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-es6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/28/es6/">ECMAScript 6 申明变量</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="ES6申明变量的6种方法"><a href="#ES6申明变量的6种方法" class="headerlink" title="ES6申明变量的6种方法"></a>ES6申明变量的6种方法</h4><p>ES5只有两种申明变量的方法：var命令、function命令</p>
+<p>ES6添加了4种方法：let、const、import、class</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/08/28/es6/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/08/28/es6/" class="archive-article-date">
+  	<time datetime="2017-08-28T13:27:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-traverse" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/25/traverse/">children、html、contents等jQuery方法遍历的区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>&lt;div id=&apos;father&apos;&gt;
+    &lt;ul id=&apos;ul&apos;&gt;
+        &lt;li class=&quot;li&quot;&gt;一&lt;/li&gt;
+        &lt;li class=&quot;li&quot;&gt;二&lt;/li&gt;
+        &lt;li class=&quot;li&quot;&gt;三&lt;/li&gt;
+        &lt;li class=&quot;li&quot;&gt;四&lt;/li&gt;
+        &lt;li class=&quot;li&quot;&gt;五&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><h3 id><a href="#" class="headerlink" title="#"></a>#</h3><pre><code>//children():返回被选元素的所有直接子元素
+$(&apos;#father&apos;).children(); //#ul
+
+//html():
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/08/25/traverse/" class="archive-article-date">
+  	<time datetime="2017-08-25T10:45:07.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-25</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-margin" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/14/margin/">margin，padding百分比</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对于前端的html，css自我感觉基础知识掌握的还可以，最近在牛客网网做题，深受打击，html可不能小瞧它呀！这不，稍不注意就踩着坑了。</p>
+<p>回归正题：当margin，padding的值是百分比时，值得依据都是相对最近的父级块级元素的<strong>宽度</strong>。</p>
+<p><strong>注意：是宽度 宽度 宽度！！！</strong> 重要的事说3遍。</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2017/08/14/margin/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/08/14/margin/" class="archive-article-date">
+  	<time datetime="2017-08-14T03:35:54.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-14</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/programming/">programming</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    </nav>
+  
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

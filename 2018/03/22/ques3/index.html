@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>问题汇总 | 小彭子的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文地址 跨域问题 浏览器为了安全实施的同源策略导致的，同源：两个URL的域名、协议、端口要完全相同 解决方案： script标签jsonp跨域、nginx反向代理、nodejs中间件代理跨域、后端在头部信息设置安全域名  JSONP CORS 服务端代理  JSONP的原理： 利用script标签支持跨域的属性，用script标签拿到包裹了数据的方法（相当于是返回了一段js代码），在请求中包含c">
+<meta name="keywords" content="问题汇总">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问题汇总">
+<meta property="og:url" content="http://yoursite.com/2018/03/22/ques3/index.html">
+<meta property="og:site_name" content="小彭子的博客">
+<meta property="og:description" content="原文地址 跨域问题 浏览器为了安全实施的同源策略导致的，同源：两个URL的域名、协议、端口要完全相同 解决方案： script标签jsonp跨域、nginx反向代理、nodejs中间件代理跨域、后端在头部信息设置安全域名  JSONP CORS 服务端代理  JSONP的原理： 利用script标签支持跨域的属性，用script标签拿到包裹了数据的方法（相当于是返回了一段js代码），在请求中包含c">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T02:46:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="问题汇总">
+<meta name="twitter:description" content="原文地址 跨域问题 浏览器为了安全实施的同源策略导致的，同源：两个URL的域名、协议、端口要完全相同 解决方案： script标签jsonp跨域、nginx反向代理、nodejs中间件代理跨域、后端在头部信息设置安全域名  JSONP CORS 服务端代理  JSONP的原理： 利用script标签支持跨域的属性，用script标签拿到包裹了数据的方法（相当于是返回了一段js代码），在请求中包含c">
+  
+    <link rel="alternative" href="/atom.xml" title="小彭子的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/face.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">彭迎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/programming">前端</a></li>
+	        
+				<li><a href="/categories/life">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+		        
+					<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">彭迎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/face.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">彭迎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上那些最容易的事情中，拖延时间最不费力。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/programming">前端</a></li>
+		        
+					<li><a href="/categories/life">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/77ya" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/py908954125/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:908954125@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-ques3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      问题汇总
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://obkoro1.com/2018/03/18/3%E6%9C%88%E5%88%9D%E4%B8%8A%E6%B5%B7%E5%89%8D%E7%AB%AF%E9%81%87%E5%88%B0%E7%AC%94%E8%AF%95%E9%A2%98%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AE%B0%E5%BD%95/#more" target="_blank" rel="noopener"><br>原文地址</a></p>
+<h4 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h4><p> 浏览器为了安全实施的同源策略导致的，同源：两个URL的域名、协议、端口要完全相同</p>
+<p>解决方案：</p>
+<p>script标签jsonp跨域、nginx反向代理、nodejs中间件代理跨域、后端在头部信息设置安全域名</p>
+<ul>
+<li>JSONP</li>
+<li>CORS</li>
+<li>服务端代理</li>
+</ul>
+<p>JSONP的原理：</p>
+<p>利用script标签支持跨域的属性，用script标签拿到包裹了数据的方法（相当于是返回了一段js代码），在请求中包含callback，服务端注入参数后返回这个回调函数，然后script标签拿到返回的js代码跨域直接运行回调，需要前后端的配合。</p>
+<p>jsonp不可以用post请求，因为script标签只支持get请求。</p>
+<hr>
+<a id="more"></a>
+<h4 id="定时器的执行顺序和机制"><a href="#定时器的执行顺序和机制" class="headerlink" title="定时器的执行顺序和机制"></a>定时器的执行顺序和机制</h4><p>因为js是单线程的，浏览器遇到setTimeout或者setInterval会先执行完当前的代码块,在此之前会把定时器推入浏览器的待执行事件队列里面,执行完当前代码才会执行定时器代码。</p>
+<pre><code> for(var i=0;i&lt;10;i++){
+  setTimeout(function(){
+    console.log(i);
+  },1000)
+}
+//打印出10個10
+
+ setTimeout(function(){
+     console.log(&quot;定时器&quot;);
+   },0)
+  console.log(&quot;先执行此条语句&quot;);
+</code></pre><hr>
+<h4 id="html中title属性和alt属性的区别"><a href="#html中title属性和alt属性的区别" class="headerlink" title="html中title属性和alt属性的区别"></a>html中title属性和alt属性的区别</h4><pre><code>&lt;img src=&quot;#&quot; alt=&quot;alt信息&quot; title=&quot;title信息&quot;/&gt;
+</code></pre><p>图片不输出信息时：显示“alt信息“，鼠标放上去显示”title信息“</p>
+<p>title属性可以用在除了base，basefont，head，html，meta，param，script和title之外的所有标签</p>
+<p>title属性的主要功能是为了提示，比如一些链接本身未清楚表达链接的目的，此时就可以添加title属性</p>
+<h4 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h4><p>1xx：1开头的是信息状态码<br>2xx：2开头的是请求成功<br>3xx：3开头的是重定向<br>4xx：4开头的是客户端错误<br>5xx：5开头的是服务器错误</p>
+<h4 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h4><p>面向对象的三大特性：继承，封装，多态</p>
+<p>面向对象：</p>
+<pre><code> //面向对象
+//定义人（姓名，性别，年龄）
+let people = function(name){
+    this.name = name;
+}
+//动作
+people.prototype={
+    eat:function(something){
+        console.log(`${this.name}吃${something}`)
+    }
+}
+//创建一个人(new一次People)
+var pauline = new people(&apos;彭彭&apos;);
+pauline.eat(&quot;火锅&quot;); //彭彭吃火锅
+//后续动作
+pauline.coding=function(){
+    console.log(this.name+&apos;写代码&apos;)
+}
+pauline.coding();//彭彭写代码
+</code></pre><p>面向过程：</p>
+<pre><code>//面向过程
+let eat = function(name,something){
+    console.log(`${name}吃${something}`);
+}
+eat(&apos;彭彭&apos;,&apos;火锅&apos;); //彭彭吃火锅
+//后续动作
+let coding = function(name){
+    console.log(`${name}写代码`);
+}
+coding(&apos;彭彭&apos;)//彭彭写代码
+</code></pre><p><strong>面向对象更加的灵活，复用性和扩展性更好。面向对象是针对对象（彭彭）来执行某些动作，并且动作可以自定义扩展</strong></p>
+<p><strong>面向过程是定义很多的动作，来指定谁来执行这个动作</strong></p>
+<hr>
+<h4 id="javascript作用域"><a href="#javascript作用域" class="headerlink" title="javascript作用域"></a>javascript作用域</h4><ul>
+<li><p>全局作用域</p>
+</li>
+<li><p>函数作用域</p>
+</li>
+</ul>
+<p>ES5之前没有块级作用域，ES6提出了这个概念</p>
+<h4 id="let和var区别"><a href="#let和var区别" class="headerlink" title="let和var区别"></a>let和var区别</h4><ul>
+<li>var 能重复声明，let不能</li>
+<li>let的变量作用范围不同，不存在变量提升</li>
+</ul>
+<h4 id="ES6常用特性"><a href="#ES6常用特性" class="headerlink" title="ES6常用特性"></a>ES6常用特性</h4><ul>
+<li>箭头函数</li>
+<li>模板字符串</li>
+<li>Class</li>
+<li>module</li>
+<li>对象解构</li>
+<li>Promise</li>
+</ul>
+<p>有三种状态：pending、fulfilled、reject</p>
+<p>两个过程：</p>
+<p>pending -&gt; fulfilled</p>
+<p>pending -&gt; rejectd</p>
+<h4 id="react生命周期"><a href="#react生命周期" class="headerlink" title="react生命周期"></a>react生命周期</h4><p>初始化</p>
+<ul>
+<li>constructor</li>
+<li>getInitialState</li>
+<li>getDefaultProps</li>
+<li>componentWillMount</li>
+<li>render</li>
+<li>componentDidMount</li>
+</ul>
+<p>更新过程</p>
+<ul>
+<li>componentWillReceiveProps</li>
+<li>shouldComponentUpdate</li>
+<li>componentWillUpdate</li>
+<li>render</li>
+<li>componentDidUpdate</li>
+</ul>
+<p>卸载过程</p>
+<ul>
+<li>componentWillUnmount</li>
+<li><h4 id="构建工具webpack的loader是干什么的"><a href="#构建工具webpack的loader是干什么的" class="headerlink" title="构建工具webpack的loader是干什么的"></a>构建工具webpack的loader是干什么的</h4></li>
+</ul>
+<p>loader是用来编译和处理资源的</p>
+<h4 id="vue和react使用起来有什么区别"><a href="#vue和react使用起来有什么区别" class="headerlink" title="vue和react使用起来有什么区别"></a>vue和react使用起来有什么区别</h4><p>vue数据双向绑定的原理</p>
+<h4 id="什么情况下会返回304状态码"><a href="#什么情况下会返回304状态码" class="headerlink" title="什么情况下会返回304状态码"></a>什么情况下会返回304状态码</h4><p>这个问题比较复杂吧，这里回答了一个Etag</p>
+<p>ETag是HTTP1.1产物，服务器通过某种算法，给资源计算出一个唯一的标志符，可能是一个资源的MD5值，在把资源响应给客户端的时候，会在实体首部加上”ETag: 值”，一起返回给客户端<br>客户端会保留这个字段，并在下次请求的时候一并带过去给服务端，服务端接受客户端传来的ETag的值，然后进行比较前后的ETag的值是否一致，就能判断资源相对客户端是否被修改了<br>如果匹配上了，服务端会返回304状态码，并告诉客户端直接使用本地缓存即可，反之，则以正常的GET200形式返回资源<br>对应的首部字段</p>
+<p>If-None-Match：ETag-value<br>If-Match：ETag-value</p>
+<p>还有一种就是下面问的Last-Modified</p>
+<h4 id="http缓存，cache-control和etag有什么区别"><a href="#http缓存，cache-control和etag有什么区别" class="headerlink" title="http缓存，cache-control和etag有什么区别"></a>http缓存，cache-control和etag有什么区别</h4><ul>
+<li>服务器将资源传递给客户端时，会将资源最后更改的时间以”Last-Modified: GMT”的形式加在实体首部上一起返回给客户端</li>
+<li>客户端为该资源标记上信息，下次请求时，会将该信息带在请求报文中一起返回给服务端，服务端去做检查，若服务器上该资源最终修改时间是一致的，则资源没有被修改过，直接返回304状态码，不返回内容</li>
+<li><p>对应的首部字段</p>
+<ul>
+<li><p>If-Modified-Since: Last-Modified-value</p>
+</li>
+<li><p>If-Unmodified-Since: Last-Modified-value</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="css盒模型"><a href="#css盒模型" class="headerlink" title="css盒模型"></a>css盒模型</h4><ul>
+<li>标准盒模型（w3c标准）</li>
+</ul>
+<p>总宽度为：width+margin（左右）+padding(左右)+border（左右）</p>
+<ul>
+<li>怪异模式（ie）</li>
+</ul>
+<p>总宽度为：width+margin（左右） 即width已经包含了padding和border的值</p>
+<h4 id="实现水平居中"><a href="#实现水平居中" class="headerlink" title="实现水平居中"></a>实现水平居中</h4><ul>
+<li>flexbox</li>
+<li>绝对定位+margin负值（已知宽高）</li>
+<li>绝对定位+transfrom负值（未知宽高）</li>
+<li>绝对定位top left right bottom 0 + margin auto</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/03/22/ques3/" class="archive-article-date">
+  	<time datetime="2018-03-22T05:10:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-22</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/问题汇总/">问题汇总</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/query/">query</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/03/22/ques4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Object.prototype.toString.call()判断对象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/11/ques2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">tab下内容随菜单切换</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 彭迎
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 10px;">css flex</a> <a href="/tags/css选择器-html/" style="font-size: 10px;">css选择器 html</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/javascript-git/" style="font-size: 10px;">javascript git</a> <a href="/tags/jquery-validate/" style="font-size: 10px;">jquery validate</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工作问题/" style="font-size: 12px;">工作问题</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/问题汇总/" style="font-size: 10px;">问题汇总</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">小彭子 &lt;br&gt; 记性不太好的&lt;br&gt;前端开发妹子一枚 &lt;br&gt;  博客记录前端知识学习&lt;br&gt;笔记和平时生活七七八八</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
